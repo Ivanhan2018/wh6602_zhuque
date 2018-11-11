@@ -1,0 +1,382 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "Resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxRes.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "Resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxRes.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""Res\\GameFrame.rc2""  // 不是由 Microsoft Visual C++ 编辑过的资源\r\n"
+    "#include ""afxRes.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,1,0
+ PRODUCTVERSION 1,0,1,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "Comments", "深圳市朱雀网络技术有限公司"
+            VALUE "CompanyName", "深圳市朱雀网络技术有限公司"
+            VALUE "FileDescription", "游戏客户端框架"
+            VALUE "FileVersion", "1, 0, 1, 0"
+            VALUE "InternalName", "GameFrame.dll"
+            VALUE "LegalTrademarks", "深圳市朱雀网络技术有限公司 保留所有权利。"
+            VALUE "OriginalFilename", "GameFrame.dll"
+            VALUE "ProductName", "游戏客户端框架"
+            VALUE "ProductVersion", "1, 0, 1, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_GAME_FRAME DIALOGEX 0, 0, 427, 305
+STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_SYSMENU
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "",IDC_CONTROL,274,108,6,41
+    CONTROL         "",IDC_VOR_SPLITER,"Static",SS_BLACKFRAME | SS_NOTIFY,
+                    262,0,3,304
+END
+
+IDD_FRAME_CONTROL DIALOGEX 0, 0, 188, 322
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_USER_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHAREIMAGELISTS | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | 
+                    NOT WS_VISIBLE | WS_TABSTOP,3,4,181,107
+    CONTROL         "",IDC_CHAT_MESSAGE,"RichEdit20A",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | ES_NUMBER | WS_VSCROLL | 
+                    WS_TABSTOP,3,133,179,93
+    PUSHBUTTON      "",IDC_GAME_OPTION,118,115,18,14,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDC_GAME_RULE,85,115,18,14,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDC_SOUND,19,115,18,14,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDC_SEND_CHAT,153,305,11,11,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDC_EXPRESSION,24,288,12,12,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDC_PHRASE,7,288,12,12,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDC_COLOR_SET,41,288,12,12,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDC_CLEAN_SCREEN,61,288,12,12,NOT WS_VISIBLE
+    COMBOBOX        IDC_CHAT_OBJECT,3,305,58,107,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | NOT WS_VISIBLE | WS_VSCROLL | 
+                    WS_TABSTOP,WS_EX_CLIENTEDGE
+    COMBOBOX        IDC_CHAT_INPUT,69,305,73,133,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | CBS_SORT | NOT WS_VISIBLE | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "",IDC_LOOKON,52,115,18,14,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDC_GAME_QUIT,151,115,18,14,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDC_BUGLE,80,288,12,12,NOT WS_VISIBLE
+END
+
+IDD_INPUT_MSG_DLG DIALOGEX 0, 0, 169, 23
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPSIBLINGS | 
+    WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "",IDC_EXP_BT,144,3,18,14
+    DEFPUSHBUTTON   "",IDC_SEND_MSG,128,3,17,14
+    PUSHBUTTON      "",IDC_UP_TAG,4,3,18,13
+    COMBOBOX        IDC_INPUT_EDIT_MSG,21,4,105,150,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "",IDC_UP_TAG2,4,3,18,13
+END
+
+IDD_SCORE_VIEW_DLG DIALOGEX 0, 0, 24, 19
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_GAME_TASK_DLG DIALOGEX 0, 0, 32, 20
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_SHOWTIMEDJLIST DIALOGEX 0, 0, 61, 31
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+END
+
+IDD_SHOWDJINFO DIALOGEX 0, 0, 67, 27
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+END
+
+IDD_DLG_DJ_GIVE_INFO DIALOGEX 0, 0, 65, 28
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG_GAMESET DIALOGEX 0, 0, 201, 134
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         24464,IDC_STATIC_GAME,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_TABSTOP,35,41,127,15
+    CONTROL         24464,IDC_STATIC_MUSIC,"Static",SS_BITMAP | SS_NOTIFY | 
+                    WS_TABSTOP,36,80,127,15
+END
+
+IDD_USERINFODLG DIALOGEX 0, 0, 43, 30
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+END
+
+IDD_DLG_GAMEAFFICHE DIALOGEX 0, 0, 99, 15
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DLG_USER_AFFICE DIALOGEX 0, 0, 135, 42
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DLG_USERACTION DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_SAY_DLG DIALOGEX 0, 0, 98, 44
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DLG_TASK_FINISH DIALOGEX 0, 0, 73, 37
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+63020 DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DLG_GAME_LAUGUAGE DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG8 DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_NEWGIFT DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SCROLL_IMAGE        BITMAP                  "res\\scroll.bmp"
+IDB_MP_CHANNEL          BITMAP                  "res\\mp_channel.bmp"
+IDB_MP_CHANNEL_ACTIVE   BITMAP                  "res\\mp_channel_active.bmp"
+IDB_MP_THUMB            BITMAP                  "res\\mp_thumb.bmp"
+IDB_MP_THUMB_ACTIVE     BITMAP                  "res\\mp_thumb_active.bmp"
+IDB_BT_DJ_RIGHT         BITMAP                  "res\\BT_DJ_Right.bmp"
+IDB_BT_DJ_LEFT          BITMAP                  "res\\BT_DJ_Left.bmp"
+60005                   BITMAP                  "res\\ImageDJInfoShow.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_GAME_FRAME, DIALOG
+    BEGIN
+        RIGHTMARGIN, 69
+        BOTTOMMARGIN, 36
+    END
+
+    IDD_INPUT_MSG_DLG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 20
+    END
+
+    IDD_DIALOG_GAMESET, DIALOG
+    BEGIN
+        RIGHTMARGIN, 194
+    END
+
+    IDD_DLG_USERACTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    63020, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_DLG_GAME_LAUGUAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_DIALOG8, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_NEWGIFT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IMAGE_DJ_ICO_FSK        PNG                     "res\\dj\\FSK.png"
+IMAGE_DJ_ICO_JBK_S      PNG                     "res\\dj\\JBK_S.png"
+IMAGE_DJ_ICO_MLSS       PNG                     "res\\dj\\MLSS.png"
+IMAGE_DJ_ICO_JBK_M      PNG                     "res\\dj\\JBK_M.png"
+IMAGE_DJ_ICO_JBK_L      PNG                     "res\\dj\\JBK_L.png"
+IMAGE_DJ_ICO_HSZFK      PNG                     "res\\dj\\HSZFK.png"
+IMAGE_DJ_ICO_GOODLUCK   PNG                     "res\\dj\\GOODLUCK.png"
+IMAGE_DJ_ICO_GAME_RACE  PNG                     "res\\dj\\GAME_RACE.png"
+IMAGE_DJ_ICO_FSK_L      PNG                     "res\\dj\\FSK_L.png"
+IMAGE_DJ_ICO_JBK_S_L    PNG                     "res\\dj\\JBK_S_L.png"
+IMAGE_DJ_ICO_MLSS_L     PNG                     "res\\dj\\MLSS_L.png"
+IMAGE_DJ_ICO_JBK_M_L    PNG                     "res\\dj\\JBK_M_L.png"
+IMAGE_DJ_ICO_JBK_L_L    PNG                     "res\\dj\\JBK_L_L.png"
+IMAGE_DJ_ICO_HSZFK_L    PNG                     "res\\dj\\HSZFK_L.png"
+IMAGE_DJ_ICO_GOODLUCK_L PNG                     "res\\dj\\GOODLUCK_L.png"
+IMAGE_DJ_ICO_GAME_RACE_L PNG                     "res\\dj\\GAME_RACE_L.png"
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "Res\GameFrame.rc2"  // 不是由 Microsoft Visual C++ 编辑过的资源
+#include "afxRes.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

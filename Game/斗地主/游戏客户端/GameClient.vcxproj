@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugVD|Win32">
+      <Configuration>DebugVD</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseVD|Win32">
+      <Configuration>ReleaseVD</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>疯狂斗地主游戏客户端</ProjectName>
+    <ProjectGuid>{F2D70F30-23FC-4973-A798-AED329359B33}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseVD|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugVD|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseVD|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugVD|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.61030.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>../../临时文件/$(ProjectName)/Debug\</OutDir>
+    <IntDir>../../临时文件/$(ProjectName)/Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>../../临时文件/$(ProjectName)/Release\</OutDir>
+    <IntDir>../../临时文件/$(ProjectName)/Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugVD|Win32'">
+    <OutDir>../../临时文件/$(ProjectName)/DebugVD\</OutDir>
+    <IntDir>../../临时文件/$(ProjectName)/DebugVD\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseVD|Win32'">
+    <OutDir>../../临时文件/$(ProjectName)/ReleaseVD\</OutDir>
+    <IntDir>../../临时文件/$(ProjectName)/ReleaseVD\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\开发库\Include\;..\..\开发库\Common\;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;GAME_LOAD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../开发库/Lib/GameFrameD.lib;../../开发库/Lib/SkinControlsD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../../Platform/运行/ClientDebug/LandCrazy.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\..\开发库\Include\;..\..\开发库\Common\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GAME_LOAD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../开发库/Lib/GameFrame.lib;../../开发库/Lib/SkinControls.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../../Platform/运行/ClientRelease/LandCrazy.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugVD|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\开发库\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;VIDEO_GAME;GAME_LOAD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../../开发库/Lib/GameFrameD.lib;../../../开发库/Lib/SkinControlsD.lib;../../../开发库/Lib/VideoServiceD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../../server/运行/ClientDebug/LandCrazyVD.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)/$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\..\发布组件\客户端组件\Debug
+copy /y ..\..\..\运行\Debug\$(TargetFileName) ..\..\..\发布组件\客户端组件\Debug\$(TargetFileName)
+</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseVD|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\开发库\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;VIDEO_GAME;GAME_LOAD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../../开发库/Lib/GameFrame.lib;../../../开发库/Lib/SkinControls.lib;../../../开发库/Lib/VideoService.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../../server/运行/ClientRelease/LandCrazyVD.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\..\发布组件\客户端组件\Release
+copy /y ..\..\..\运行\Release\$(TargetFileName) ..\..\..\发布组件\客户端组件\Release\$(TargetFileName)
+</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ActionWnd.cpp" />
+    <ClCompile Include="CardControl.cpp" />
+    <ClCompile Include="GameCard.cpp" />
+    <ClCompile Include="GameClient.cpp" />
+    <ClCompile Include="GameClientDlg.cpp">
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='DebugVD|Win32'">4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Include="GameClientView.cpp" />
+    <ClCompile Include="GameLogic.cpp" />
+    <ClCompile Include="GameOption.cpp" />
+    <ClCompile Include="GameScoreView.cpp" />
+    <ClCompile Include="Stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugVD|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseVD|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\开发库\Common\ThreadGuard.cpp" />
+    <ClCompile Include="..\..\开发库\Common\TraceCatch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActionWnd.h" />
+    <ClInclude Include="CardControl.h" />
+    <ClInclude Include="..\消息定义\CMD_Land.h" />
+    <ClInclude Include="GameCard.h" />
+    <ClInclude Include="GameClient.h" />
+    <ClInclude Include="GameClientDlg.h" />
+    <ClInclude Include="GameClientView.h" />
+    <ClInclude Include="GameLogic.h" />
+    <ClInclude Include="GameOption.h" />
+    <ClInclude Include="GameScoreView.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Stdafx.h" />
+    <ClInclude Include="..\..\开发库\Common\ThreadGuard.h" />
+    <ClInclude Include="..\..\开发库\Common\TraceCatch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\AUTO_OUT_CARD.bmp" />
+    <Image Include="Res\BANKER.bmp" />
+    <Image Include="Res\BOMB.bmp" />
+    <Image Include="Res\BOMB_EFFECT.bmp" />
+    <Image Include="Res\BRIGHT_CARD.bmp" />
+    <Image Include="Res\BRIGHT_CARD_START.bmp" />
+    <Image Include="Res\BT_AutoplayOff.bmp" />
+    <Image Include="Res\BT_AutoplayOn.bmp" />
+    <Image Include="Res\CARD.bmp" />
+    <Image Include="Res\CARD_800.bmp" />
+    <Image Include="Res\CHAT.bmp" />
+    <Image Include="Res\COUNT_SORT.bmp" />
+    <Image Include="Res\DOUBLE_SCORE.bmp" />
+    <Image Include="Res\GAME_END.bmp" />
+    <Image Include="Res\GAME_LOGO.bmp" />
+    <Image Include="Res\GameClient.ico" />
+    <Image Include="Res\GIVE_UP.bmp" />
+    <Image Include="Res\NOT_BRIGHT_CARD.bmp" />
+    <Image Include="Res\NOT_DOUBLE_SCORE.bmp" />
+    <Image Include="Res\NOT_SNATCH_LAND.bmp" />
+    <Image Include="Res\ONE_SCORE.bmp" />
+    <Image Include="Res\ORDER_SORT.bmp" />
+    <Image Include="Res\OUT_CARD.bmp" />
+    <Image Include="Res\PASS.bmp" />
+    <Image Include="Res\SCORE.bmp" />
+    <Image Include="Res\Scorelist.bmp" />
+    <Image Include="Res\SNATCH_LAND.bmp" />
+    <Image Include="Res\START.bmp" />
+    <Image Include="Res\THREE_SCORE.bmp" />
+    <Image Include="Res\TWO_SCORE.bmp" />
+    <Image Include="Res\USER_TRUSTEE.bmp" />
+    <Image Include="Res\VIEW_BACK.bmp" />
+    <Image Include="Res\VIEW_BUTTOM.bmp" />
+    <Image Include="Res\VIEW_CENTER.bmp" />
+    <Image Include="Res\Waitscore.bmp" />
+    <Image Include="Res\WIN_LOSE.bmp" />
+    <Image Include="Res\BALANCEBEI.png" />
+    <Image Include="Res\BANKER.png" />
+    <Image Include="Res\CARD.png" />
+    <Image Include="Res\CARD_800.png" />
+    <Image Include="Res\CARD_SELECT.png" />
+    <Image Include="Res\GAME_END.png" />
+    <Image Include="Res\ImageNums.png" />
+    <Image Include="Res\LAND_TIMES.png" />
+    <Image Include="Res\ONE_CARD_WARMING.png" />
+    <Image Include="Res\SCORE.png" />
+    <Image Include="Res\TWO_CARD_WARMING.png" />
+    <Image Include="Res\TWO_CARD_WRMING.png" />
+    <Image Include="Res\USER_TRUSTEE.png" />
+    <Image Include="Res\WIN_LOSE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\CARD_CUR.cur" />
+    <None Include="Res\GameClient.rc2" />
+    <None Include="Res\out_card.bin" />
+    <None Include="Res\wave1.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GameClient.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Res\BOMB.wav" />
+    <Media Include="Res\BRIGHT_CARD.wav" />
+    <Media Include="Res\CALL_CARD.wav" />
+    <Media Include="Res\DISPATCH_CARD.wav" />
+    <Media Include="Res\Game_end.wav" />
+    <Media Include="Res\GAME_LOST.wav" />
+    <Media Include="Res\Game_start.wav" />
+    <Media Include="Res\Game_warn.wav" />
+    <Media Include="Res\GAME_WIN.wav" />
+    <Media Include="Res\GIVE_UP_SCORE.wav" />
+    <Media Include="Res\MOST_CARD.wav" />
+    <Media Include="Res\NOT_SNATCH_LAND.wav" />
+    <Media Include="Res\ONE_SCORE.wav" />
+    <Media Include="Res\OUT_CARD.wav" />
+    <Media Include="Res\PASS_CARD.wav" />
+    <Media Include="Res\SNATCH_LAND.wav" />
+    <Media Include="Res\THREE_SCORE.wav" />
+    <Media Include="Res\TWO_SCORE.wav" />
+    <Media Include="Res\WARMING_CARD.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\游戏服务器\ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="GameClient.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

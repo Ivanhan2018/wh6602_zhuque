@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{918acb0b-df3c-4a7e-a934-632e354af0c2}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8b5b1f19-c312-4a54-a847-34e48fb70dae}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{1530b741-e7aa-4fc2-9358-0bc5f39605d6}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Downd">
+      <UniqueIdentifier>{f192d51d-b904-43c2-90cb-bcb21dbb2565}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CDirOperate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileMD5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameUpdate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameUpdateDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Generate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InetSession.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InternetGetFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="md5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RMessageBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\ThreadGuard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UISkinManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GameUpdate.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CDirOperate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameUpdate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameUpdateDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Generate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InetSession.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InternetGetFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiLanguage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RMessageBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ThreadGuard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UISkinManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CDownloadManager.h">
+      <Filter>Downd</Filter>
+    </ClInclude>
+    <ClInclude Include="DownLoad.h">
+      <Filter>Downd</Filter>
+    </ClInclude>
+    <ClInclude Include="DownLoadService.h">
+      <Filter>Downd</Filter>
+    </ClInclude>
+    <ClInclude Include="DownLoadServiceInterface.h">
+      <Filter>Downd</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bg.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap_Num.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmapclose.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmapNum.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\button01.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\button_close.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\button_close_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\button_maximize.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\button_maximize_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\button_minimize.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\button_minimize_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\button_restore.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\button_restore_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\button_system_control.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ErrorBG.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\GameUpdate.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ImageHere.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\PercentSign.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ProgressBG.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ProgressGree.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ProgressRed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SKIN_BUTTON_BACK.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\title01.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\title02.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\title03.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\transfer.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Warning.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\png_num.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\GameUpdate.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

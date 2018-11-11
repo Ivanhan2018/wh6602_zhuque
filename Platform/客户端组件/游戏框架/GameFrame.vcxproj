@@ -1,0 +1,692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>游戏框架</ProjectName>
+    <ProjectGuid>{D6452141-70F6-4857-8D60-AF2485F75A40}</ProjectGuid>
+    <RootNamespace>游戏框架</RootNamespace>
+    <Keyword>MFCDLLProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.61030.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>../../临时文件/$(ProjectName)/Debug\</OutDir>
+    <IntDir>../../临时文件/$(ProjectName)/Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>../../临时文件/$(ProjectName)/Release\</OutDir>
+    <IntDir>../../临时文件/$(ProjectName)/Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\模板库\;..\..\共享组件\界面控件\;..\..\共享组件\界面资源\;..\..\模板库\头文件\;..\..\公共文件\;..\..\common\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;GAME_FRAME_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../链接库/ComServiceD.lib;../../链接库/ClientShareD.lib;../../链接库/SkinControlsD.lib;Winmm.lib;skinsb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../运行/ClientDebug/GameFrameD.dll</OutputFile>
+      <ModuleDefinitionFile>.\GameFrameD.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)/$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>../../链接库/GameFrameD.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\模板库\;..\..\共享组件\界面控件\;..\..\共享组件\界面资源\;..\..\模板库\头文件\;..\..\公共文件\;..\..\common\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXEXT;GAME_FRAME_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../链接库/ComService.lib;../../链接库/ClientShare.lib;../../链接库/SkinControls.lib;Winmm.lib;skinsb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../运行/ClientRelease/GameFrame.dll</OutputFile>
+      <ModuleDefinitionFile>.\GameFrame.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>../../链接库/GameFrame.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <PostBuildEvent>
+      <Command>mkdir ..\..\发布组件\客户端组件\ClientRelease
+copy /y ..\..\运行\ClientRelease\$(TargetFileName) ..\..\发布组件\客户端组件\ClientRelease\$(TargetFileName)
+</Command>
+    </PostBuildEvent>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BitmapSlider.cpp" />
+    <ClCompile Include="ClientKernel.cpp" />
+    <ClCompile Include="ClientKernelSink.cpp" />
+    <ClCompile Include="CustSite.cpp" />
+    <ClCompile Include="DirectSound.cpp" />
+    <ClCompile Include="exmain.cpp" />
+    <ClCompile Include="External.cpp" />
+    <ClCompile Include="FilterString.cpp" />
+    <ClCompile Include="GameAffiche.cpp" />
+    <ClCompile Include="GameClientDJInfo.cpp" />
+    <ClCompile Include="GameFrame.cpp" />
+    <ClCompile Include="GameFrameApp.cpp" />
+    <ClCompile Include="GameFrameBorder.cpp" />
+    <ClCompile Include="GameFrameControl.cpp" />
+    <ClCompile Include="GameFrameDlg.cpp" />
+    <ClCompile Include="GameFrameView.cpp" />
+    <ClCompile Include="GameGiveDJInfo.cpp" />
+    <ClCompile Include="GamemViewAffiche.cpp" />
+    <ClCompile Include="GameSoundSet.cpp" />
+    <ClCompile Include="GameTaskDialog.cpp" />
+    <ClCompile Include="GlobalOption.cpp" />
+    <ClCompile Include="LanguageList.cpp" />
+    <ClCompile Include="MIDI.cpp" />
+    <ClCompile Include="NewGiftFlashDlg.cpp" />
+    <ClCompile Include="OnlineKeepTime.cpp" />
+    <ClCompile Include="ScoreView.cpp" />
+    <ClCompile Include="ShowDJInfo.cpp" />
+    <ClCompile Include="ShowTimeDJList.cpp" />
+    <ClCompile Include="ShowUserActionInfo.cpp" />
+    <ClCompile Include="Stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TalkDlg.cpp" />
+    <ClCompile Include="TaskFinishFlash.cpp" />
+    <ClCompile Include="ThreadDraw.cpp" />
+    <ClCompile Include="..\..\common\ThreadGuard.cpp" />
+    <ClCompile Include="..\..\common\TraceCatch.cpp" />
+    <ClCompile Include="UserAction.cpp" />
+    <ClCompile Include="UserDaoJu.cpp" />
+    <ClCompile Include="UserInfoDlg.cpp" />
+    <ClCompile Include="UserInfoView.cpp" />
+    <ClCompile Include="UserListView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BitmapSlider.h" />
+    <ClInclude Include="ClientKernel.h" />
+    <ClInclude Include="ClientKernelSink.h" />
+    <ClInclude Include="detours.h" />
+    <ClInclude Include="DirectSound.h" />
+    <ClInclude Include="FilterString.h" />
+    <ClInclude Include="GameAffiche.h" />
+    <ClInclude Include="GameClientDJInfo.h" />
+    <ClInclude Include="GameFrame.h" />
+    <ClInclude Include="GameFrameApp.h" />
+    <ClInclude Include="GameFrameBorder.h" />
+    <ClInclude Include="GameFrameControl.h" />
+    <ClInclude Include="GameFrameCustSite.h" />
+    <ClInclude Include="GameFrameDlg.h" />
+    <ClInclude Include="GameFrameExmain.h" />
+    <ClInclude Include="GameFrameExternal.h" />
+    <ClInclude Include="GameFrameNetDefine.h" />
+    <ClInclude Include="GameFrameView.h" />
+    <ClInclude Include="GameGiveDJInfo.h" />
+    <ClInclude Include="GameSoundSet.h" />
+    <ClInclude Include="GameTaskDialog.h" />
+    <ClInclude Include="GameViewAffiche.h" />
+    <ClInclude Include="GlobalOption.h" />
+    <ClInclude Include="LanguageList.h" />
+    <ClInclude Include="memdc.h" />
+    <ClInclude Include="MIDI.h" />
+    <ClInclude Include="MoveFun.h" />
+    <ClInclude Include="NewGiftFlashDlg.h" />
+    <ClInclude Include="occimpl.h" />
+    <ClInclude Include="OnlineKeepTime.h" />
+    <ClInclude Include="..\..\公共文件\PublicDef.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ScoreView.h" />
+    <ClInclude Include="ShowDJInfo.h" />
+    <ClInclude Include="ShowTimeDJList.h" />
+    <ClInclude Include="ShowUserActionInfo.h" />
+    <ClInclude Include="skinsb.h" />
+    <ClInclude Include="Stdafx.h" />
+    <ClInclude Include="TalkDlg.h" />
+    <ClInclude Include="TaskFinishFlash.h" />
+    <ClInclude Include="ThreadDraw.h" />
+    <ClInclude Include="UserAction.h" />
+    <ClInclude Include="UserDaoJu.h" />
+    <ClInclude Include="UserInfoDlg.h" />
+    <ClInclude Include="UserInfoView.h" />
+    <ClInclude Include="UserListView.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\accept_task.bmp" />
+    <Image Include="Res\Action\ActionBK.bmp" />
+    <Image Include="Res\Action\ActionFlashBK.bmp" />
+    <Image Include="Res\bt_accept_close.bmp" />
+    <Image Include="Res\Bt_bugle.bmp" />
+    <Image Include="Res\Chess_frame\BT_CLEAN_SCREEN.bmp" />
+    <Image Include="Res\Card_frame\BT_CLEAN_SCREEN.bmp" />
+    <Image Include="Res\BT_CLEAN_SCREEN.bmp" />
+    <Image Include="Res\Chess_frame\BT_COLOR_SET.bmp" />
+    <Image Include="Res\BT_COLOR_SET.bmp" />
+    <Image Include="Res\Card_frame\BT_COLOR_SET.bmp" />
+    <Image Include="Res\BT_DJ_City.bmp" />
+    <Image Include="Res\BT_DJ_Help.bmp" />
+    <Image Include="Res\BT_DJ_Left.bmp" />
+    <Image Include="Res\BT_DJ_Right.bmp" />
+    <Image Include="Res\BT_DJ_Set.bmp" />
+    <Image Include="Res\BT_DJ_Task.bmp" />
+    <Image Include="Res\BT_Down.bmp" />
+    <Image Include="Res\UserView\BT_EXCHANGE_CHARM_VALUE.bmp" />
+    <Image Include="Res\BT_EXPESSION.bmp" />
+    <Image Include="Res\Card_frame\BT_EXPESSION.bmp" />
+    <Image Include="Res\Chess_frame\BT_EXPESSION.bmp" />
+    <Image Include="Res\BT_Expression.bmp" />
+    <Image Include="Res\BT_GAME_OPTION.bmp" />
+    <Image Include="Res\BT_GAME_QUIT.bmp" />
+    <Image Include="Res\BT_GAME_RULE.bmp" />
+    <Image Include="Res\BT_GoPlaza.bmp" />
+    <Image Include="Res\BT_GoPlaza_2.bmp" />
+    <Image Include="Res\BT_GoRoom.bmp" />
+    <Image Include="Res\BT_GoRoom_2.bmp" />
+    <Image Include="Res\BT_LightUp.bmp" />
+    <Image Include="Res\BT_LOOKON.bmp" />
+    <Image Include="Res\BT_LOOKON_EX.bmp" />
+    <Image Include="Res\BT_OPTION.bmp" />
+    <Image Include="Res\Card_frame\BT_OPTION.bmp" />
+    <Image Include="Res\Chess_frame\BT_OPTION.bmp" />
+    <Image Include="Res\BT_QUIT.bmp" />
+    <Image Include="Res\Chess_frame\BT_QUIT.bmp" />
+    <Image Include="Res\Card_frame\BT_QUIT.bmp" />
+    <Image Include="Res\Card_frame\BT_SEND_CHAT.bmp" />
+    <Image Include="Res\Chess_frame\BT_SEND_CHAT.bmp" />
+    <Image Include="Res\BT_SEND_CHAT.bmp" />
+    <Image Include="Res\BT_SendChat.bmp" />
+    <Image Include="Res\Action\BT_ShowAction.bmp" />
+    <Image Include="Res\BT_SOUND.bmp" />
+    <Image Include="Res\BT_SOUND_EX.bmp" />
+    <Image Include="Res\BT_StartGame.BMP" />
+    <Image Include="Res\BT_StartGame_2.BMP" />
+    <Image Include="Res\bt_task_end.bmp" />
+    <Image Include="Res\Action\BT_UA_0.bmp" />
+    <Image Include="Res\Action\BT_UA_1.bmp" />
+    <Image Include="Res\Action\BT_UA_10.bmp" />
+    <Image Include="Res\Action\BT_UA_11.bmp" />
+    <Image Include="Res\Action\BT_UA_12.bmp" />
+    <Image Include="Res\Action\BT_UA_13.bmp" />
+    <Image Include="Res\Action\BT_UA_14.bmp" />
+    <Image Include="Res\Action\BT_UA_15.bmp" />
+    <Image Include="Res\Action\BT_UA_16.bmp" />
+    <Image Include="Res\Action\BT_UA_17.bmp" />
+    <Image Include="Res\Action\BT_UA_18.bmp" />
+    <Image Include="Res\Action\BT_UA_19.bmp" />
+    <Image Include="Res\Action\BT_UA_2.bmp" />
+    <Image Include="Res\Action\BT_UA_3.bmp" />
+    <Image Include="Res\Action\BT_UA_4.bmp" />
+    <Image Include="Res\Action\BT_UA_5.bmp" />
+    <Image Include="Res\Action\BT_UA_6.bmp" />
+    <Image Include="Res\Action\BT_UA_7.bmp" />
+    <Image Include="Res\Action\BT_UA_8.bmp" />
+    <Image Include="Res\Action\BT_UA_9.bmp" />
+    <Image Include="Res\BT_Up.bmp" />
+    <Image Include="Res\BTClose.bmp" />
+    <Image Include="Res\BTMin.bmp" />
+    <Image Include="Res\BTMuteSound.bmp" />
+    <Image Include="Res\BTSound.bmp" />
+    <Image Include="Res\CHAT_BUGLE.bmp" />
+    <Image Include="Res\UserView\FeMale.bmp" />
+    <Image Include="Res\Flowers\Flower1.bmp" />
+    <Image Include="Res\Flowers\Flower10.bmp" />
+    <Image Include="Res\Flowers\Flower11.bmp" />
+    <Image Include="Res\Flowers\Flower2.bmp" />
+    <Image Include="Res\Flowers\Flower3.bmp" />
+    <Image Include="Res\Flowers\Flower4.bmp" />
+    <Image Include="Res\Flowers\Flower5.bmp" />
+    <Image Include="Res\Flowers\Flower6.bmp" />
+    <Image Include="Res\Flowers\Flower7.bmp" />
+    <Image Include="Res\Flowers\Flower8.bmp" />
+    <Image Include="Res\Flowers\Flower9.bmp" />
+    <Image Include="Res\FRAME_BL.bmp" />
+    <Image Include="Res\FRAME_BM.bmp" />
+    <Image Include="Res\FRAME_BR.bmp" />
+    <Image Include="Res\FRAME_LB.bmp" />
+    <Image Include="Res\FRAME_LM.bmp" />
+    <Image Include="Res\FRAME_LT.bmp" />
+    <Image Include="Res\FRAME_MM.bmp" />
+    <Image Include="Res\FRAME_RB.bmp" />
+    <Image Include="Res\FRAME_RM.bmp" />
+    <Image Include="Res\FRAME_RT.bmp" />
+    <Image Include="Res\FRAME_TM.bmp" />
+    <Image Include="Res\HIDE_USER_LIST.bmp" />
+    <Image Include="Res\Image\Image_0.bmp" />
+    <Image Include="Res\Image\Image_1.bmp" />
+    <Image Include="Res\Image\Image_2.bmp" />
+    <Image Include="Res\Image\Image_3.bmp" />
+    <Image Include="Res\Image\Image_4.bmp" />
+    <Image Include="Res\Image\Image_5.bmp" />
+    <Image Include="Res\Image\Image_6.bmp" />
+    <Image Include="Res\Image\Image_7.bmp" />
+    <Image Include="Res\Image\Image_8.bmp" />
+    <Image Include="Res\Image\Image_9.bmp" />
+    <Image Include="Res\IMAGE_DOWN_BACK.bmp" />
+    <Image Include="Res\image_info.bmp" />
+    <Image Include="Res\ImageChatBack.bmp" />
+    <Image Include="Res\ImageDJInfoShow.bmp" />
+    <Image Include="Res\Left_chat\LEFT_CHAT_BL.bmp" />
+    <Image Include="Res\Left_chat\LEFT_CHAT_BM.bmp" />
+    <Image Include="Res\Left_chat\LEFT_CHAT_BR.bmp" />
+    <Image Include="Res\Left_chat\LEFT_CHAT_LM.bmp" />
+    <Image Include="Res\Left_chat\LEFT_CHAT_RM.bmp" />
+    <Image Include="Res\Left_chat\LEFT_CHAT_TL.bmp" />
+    <Image Include="Res\Left_chat\LEFT_CHAT_TM.bmp" />
+    <Image Include="Res\Left_chat\LEFT_CHAT_TR.bmp" />
+    <Image Include="Res\Left_list\LEFT_LIST_BL.bmp" />
+    <Image Include="Res\Left_list\LEFT_LIST_BM.bmp" />
+    <Image Include="Res\Left_list\LEFT_LIST_BR.bmp" />
+    <Image Include="Res\Left_list\LEFT_LIST_LM.bmp" />
+    <Image Include="Res\Left_list\LEFT_LIST_RM.bmp" />
+    <Image Include="Res\Left_list\LEFT_LIST_TL.bmp" />
+    <Image Include="Res\Left_list\LEFT_LIST_TM.bmp" />
+    <Image Include="Res\Left_list\LEFT_LIST_TR.bmp" />
+    <Image Include="Res\Card_frame\LEFT_VIEW_LB.bmp" />
+    <Image Include="Res\Chess_frame\LEFT_VIEW_LB.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_LB.bmp" />
+    <Image Include="Res\Card_frame\LEFT_VIEW_LBM.bmp" />
+    <Image Include="Res\Chess_frame\LEFT_VIEW_LBM.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_LBM.bmp" />
+    <Image Include="Res\Chess_frame\LEFT_VIEW_LM.bmp" />
+    <Image Include="Res\Card_frame\LEFT_VIEW_LM.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_LM.bmp" />
+    <Image Include="Res\Chess_frame\LEFT_VIEW_LT.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_LT.bmp" />
+    <Image Include="Res\Card_frame\LEFT_VIEW_LT.bmp" />
+    <Image Include="Res\Card_frame\LEFT_VIEW_LTM.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_LTM.bmp" />
+    <Image Include="Res\Chess_frame\LEFT_VIEW_LTM.bmp" />
+    <Image Include="Res\Chess_frame\LEFT_VIEW_MB.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_MB.bmp" />
+    <Image Include="Res\Card_frame\LEFT_VIEW_MB.bmp" />
+    <Image Include="Res\Chess_frame\LEFT_VIEW_MM.bmp" />
+    <Image Include="Res\Card_frame\LEFT_VIEW_MM.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_MM.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_MMM.bmp" />
+    <Image Include="Res\Chess_frame\LEFT_VIEW_MT.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_MT.bmp" />
+    <Image Include="Res\Card_frame\LEFT_VIEW_MT.bmp" />
+    <Image Include="Res\Chess_frame\LEFT_VIEW_MTM.bmp" />
+    <Image Include="Res\Card_frame\LEFT_VIEW_MTM.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_MTM.bmp" />
+    <Image Include="Res\Card_frame\LEFT_VIEW_RB.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_RB.bmp" />
+    <Image Include="Res\Chess_frame\LEFT_VIEW_RB.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_RBM.bmp" />
+    <Image Include="Res\Card_frame\LEFT_VIEW_RBM.bmp" />
+    <Image Include="Res\Chess_frame\LEFT_VIEW_RBM.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_RM.bmp" />
+    <Image Include="Res\Card_frame\LEFT_VIEW_RM.bmp" />
+    <Image Include="Res\Chess_frame\LEFT_VIEW_RM.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_RT.bmp" />
+    <Image Include="Res\Card_frame\LEFT_VIEW_RT.bmp" />
+    <Image Include="Res\Chess_frame\LEFT_VIEW_RT.bmp" />
+    <Image Include="Res\Left_view\LEFT_VIEW_RTM.bmp" />
+    <Image Include="Res\Card_frame\LEFT_VIEW_RTM.bmp" />
+    <Image Include="Res\Chess_frame\LEFT_VIEW_RTM.bmp" />
+    <Image Include="Res\LIST_TL.bmp" />
+    <Image Include="Res\LIST_TM.bmp" />
+    <Image Include="Res\LIST_TR.bmp" />
+    <Image Include="Res\UserView\Male.bmp" />
+    <Image Include="Res\mp_channel.bmp" />
+    <Image Include="Res\mp_channel_active.bmp" />
+    <Image Include="Res\mp_thumb.bmp" />
+    <Image Include="Res\mp_thumb_active.bmp" />
+    <Image Include="Res\scroll.bmp" />
+    <Image Include="Res\SHOW_USER_LIST.bmp" />
+    <Image Include="Res\task_end.bmp" />
+    <Image Include="Res\USER_READY.bmp" />
+    <Image Include="Res\USER_STATUS.bmp" />
+    <Image Include="Res\USER_STAUS.bmp" />
+    <Image Include="Res\USER_TIMER.bmp" />
+    <Image Include="Res\VIEW_B.bmp" />
+    <Image Include="Res\Card_frame\VIEW_B.bmp" />
+    <Image Include="Res\Chess_frame\VIEW_B.bmp" />
+    <Image Include="Res\Card_frame\VIEW_BL.bmp" />
+    <Image Include="Res\Chess_frame\VIEW_BL.bmp" />
+    <Image Include="Res\VIEW_BL.bmp" />
+    <Image Include="Res\Chess_frame\VIEW_BR.bmp" />
+    <Image Include="Res\Card_frame\VIEW_BR.bmp" />
+    <Image Include="Res\VIEW_BR.bmp" />
+    <Image Include="Res\Card_frame\VIEW_L.bmp" />
+    <Image Include="Res\VIEW_L.bmp" />
+    <Image Include="Res\Chess_frame\VIEW_L.bmp" />
+    <Image Include="Res\Chess_frame\VIEW_R.bmp" />
+    <Image Include="Res\Card_frame\VIEW_R.bmp" />
+    <Image Include="Res\VIEW_R.bmp" />
+    <Image Include="Res\Chess_frame\VIEW_T.bmp" />
+    <Image Include="Res\Card_frame\VIEW_T.bmp" />
+    <Image Include="Res\VIEW_T.bmp" />
+    <Image Include="Res\Card_frame\VIEW_TL.bmp" />
+    <Image Include="Res\VIEW_TL.bmp" />
+    <Image Include="Res\Chess_frame\VIEW_TL.bmp" />
+    <Image Include="Res\Chess_frame\VIEW_TR.bmp" />
+    <Image Include="Res\VIEW_TR.bmp" />
+    <Image Include="Res\Card_frame\VIEW_TR.bmp" />
+    <Image Include="Res\DaoJuBack.png" />
+    <Image Include="Res\DaoJuWndBack.png" />
+    <Image Include="Res\dj\dj1.png" />
+    <Image Include="Res\dj\dj1_Light.png" />
+    <Image Include="Res\dj\dj2.png" />
+    <Image Include="Res\dj\dj2_Light.png" />
+    <Image Include="Res\djtimecenter.png" />
+    <Image Include="Res\djtimedown.png" />
+    <Image Include="Res\DJTimeIco.png" />
+    <Image Include="Res\djtimeup.png" />
+    <Image Include="Res\dj\FSK.png" />
+    <Image Include="Res\dj\FSK_L.png" />
+    <Image Include="Res\dj\GAME_RACE.png" />
+    <Image Include="Res\dj\GAME_RACE_L.png" />
+    <Image Include="Res\dj\GOODLUCK.png" />
+    <Image Include="Res\dj\GOODLUCK_L.png" />
+    <Image Include="Res\dj\HSZFK.png" />
+    <Image Include="Res\dj\HSZFK_L.png" />
+    <Image Include="Res\Image_AcceptTask1.png" />
+    <Image Include="Res\Image_AcceptTask2.png" />
+    <Image Include="Res\Image_AcceptTask3.png" />
+    <Image Include="Res\Image_Task1.png" />
+    <Image Include="Res\Image_Task2.png" />
+    <Image Include="Res\Image_Task3.png" />
+    <Image Include="Res\ImageChatBack.png" />
+    <Image Include="Res\ImageDJTime.png" />
+    <Image Include="Res\ImageNoMinute.png" />
+    <Image Include="Res\dj\JBK_L.png" />
+    <Image Include="Res\dj\JBK_L_L.png" />
+    <Image Include="Res\dj\JBK_M.png" />
+    <Image Include="Res\dj\JBK_M_L.png" />
+    <Image Include="Res\dj\JBK_S.png" />
+    <Image Include="Res\dj\JBK_S_L.png" />
+    <Image Include="Res\dj\MLSS.png" />
+    <Image Include="Res\dj\MLSS_L.png" />
+    <Image Include="Res\TIME_BACK.PNG" />
+    <Image Include="Res\TIME_NUMBER.PNG" />
+    <Image Include="Res\timedjback.png" />
+    <Image Include="Res\TitleBackImage.png" />
+    <Image Include="Res\Action\Flash\UA_0_01.png" />
+    <Image Include="Res\Action\Flash\UA_0_02.png" />
+    <Image Include="Res\Action\Flash\UA_0_03.png" />
+    <Image Include="Res\Action\Flash\UA_0_04.png" />
+    <Image Include="Res\Action\Flash\UA_0_05.png" />
+    <Image Include="Res\Action\Flash\UA_0_06.png" />
+    <Image Include="Res\Action\Flash\UA_0_07.png" />
+    <Image Include="Res\Action\Flash\UA_0_08.png" />
+    <Image Include="Res\Action\Flash\UA_0_09.png" />
+    <Image Include="Res\Action\Flash\UA_0_10.png" />
+    <Image Include="Res\Action\Flash\UA_0_11.png" />
+    <Image Include="Res\Action\Flash\UA_0_12.png" />
+    <Image Include="Res\Action\Flash\UA_0_13.png" />
+    <Image Include="Res\Action\Flash\UA_0_14.png" />
+    <Image Include="Res\Action\Flash\UA_0_15.png" />
+    <Image Include="Res\Action\Flash\UA_10_01.png" />
+    <Image Include="Res\Action\Flash\UA_10_02.png" />
+    <Image Include="Res\Action\Flash\UA_10_03.png" />
+    <Image Include="Res\Action\Flash\UA_10_04.png" />
+    <Image Include="Res\Action\Flash\UA_10_05.png" />
+    <Image Include="Res\Action\Flash\UA_10_06.png" />
+    <Image Include="Res\Action\Flash\UA_10_07.png" />
+    <Image Include="Res\Action\Flash\UA_10_08.png" />
+    <Image Include="Res\Action\Flash\UA_10_09.png" />
+    <Image Include="Res\Action\Flash\UA_10_10.png" />
+    <Image Include="Res\Action\Flash\UA_10_11.png" />
+    <Image Include="Res\Action\Flash\UA_10_12.png" />
+    <Image Include="Res\Action\Flash\UA_11_01.png" />
+    <Image Include="Res\Action\Flash\UA_11_02.png" />
+    <Image Include="Res\Action\Flash\UA_11_03.png" />
+    <Image Include="Res\Action\Flash\UA_11_04.png" />
+    <Image Include="Res\Action\Flash\UA_11_05.png" />
+    <Image Include="Res\Action\Flash\UA_11_06.png" />
+    <Image Include="Res\Action\Flash\UA_11_07.png" />
+    <Image Include="Res\Action\Flash\UA_11_08.png" />
+    <Image Include="Res\Action\Flash\UA_11_09.png" />
+    <Image Include="Res\Action\Flash\UA_11_10.png" />
+    <Image Include="Res\Action\Flash\UA_11_11.png" />
+    <Image Include="Res\Action\Flash\UA_11_12.png" />
+    <Image Include="Res\Action\Flash\UA_12_01.png" />
+    <Image Include="Res\Action\Flash\UA_12_02.png" />
+    <Image Include="Res\Action\Flash\UA_12_03.png" />
+    <Image Include="Res\Action\Flash\UA_12_04.png" />
+    <Image Include="Res\Action\Flash\UA_12_05.png" />
+    <Image Include="Res\Action\Flash\UA_12_06.png" />
+    <Image Include="Res\Action\Flash\UA_12_07.png" />
+    <Image Include="Res\Action\Flash\UA_12_08.png" />
+    <Image Include="Res\Action\Flash\UA_12_09.png" />
+    <Image Include="Res\Action\Flash\UA_12_10.png" />
+    <Image Include="Res\Action\Flash\UA_13_01.png" />
+    <Image Include="Res\Action\Flash\UA_13_02.png" />
+    <Image Include="Res\Action\Flash\UA_13_03.png" />
+    <Image Include="Res\Action\Flash\UA_13_04.png" />
+    <Image Include="Res\Action\Flash\UA_13_05.png" />
+    <Image Include="Res\Action\Flash\UA_13_06.png" />
+    <Image Include="Res\Action\Flash\UA_13_07.png" />
+    <Image Include="Res\Action\Flash\UA_13_08.png" />
+    <Image Include="Res\Action\Flash\UA_14_01.png" />
+    <Image Include="Res\Action\Flash\UA_14_02.png" />
+    <Image Include="Res\Action\Flash\UA_14_03.png" />
+    <Image Include="Res\Action\Flash\UA_15_01.png" />
+    <Image Include="Res\Action\Flash\UA_15_02.png" />
+    <Image Include="Res\Action\Flash\UA_15_03.png" />
+    <Image Include="Res\Action\Flash\UA_15_04.png" />
+    <Image Include="Res\Action\Flash\UA_15_05.png" />
+    <Image Include="Res\Action\Flash\UA_15_06.png" />
+    <Image Include="Res\Action\Flash\UA_15_07.png" />
+    <Image Include="Res\Action\Flash\UA_15_08.png" />
+    <Image Include="Res\Action\Flash\UA_15_09.png" />
+    <Image Include="Res\Action\Flash\UA_15_10.png" />
+    <Image Include="Res\Action\Flash\UA_15_11.png" />
+    <Image Include="Res\Action\Flash\UA_15_12.png" />
+    <Image Include="Res\Action\Flash\UA_15_13.png" />
+    <Image Include="Res\Action\Flash\UA_15_14.png" />
+    <Image Include="Res\Action\Flash\UA_15_15.png" />
+    <Image Include="Res\Action\Flash\UA_15_16.png" />
+    <Image Include="Res\Action\Flash\UA_15_17.png" />
+    <Image Include="Res\Action\Flash\UA_15_18.png" />
+    <Image Include="Res\Action\Flash\UA_16_01.png" />
+    <Image Include="Res\Action\Flash\UA_16_02.png" />
+    <Image Include="Res\Action\Flash\UA_16_03.png" />
+    <Image Include="Res\Action\Flash\UA_16_04.png" />
+    <Image Include="Res\Action\Flash\UA_16_05.png" />
+    <Image Include="Res\Action\Flash\UA_16_06.png" />
+    <Image Include="Res\Action\Flash\UA_16_07.png" />
+    <Image Include="Res\Action\Flash\UA_16_08.png" />
+    <Image Include="Res\Action\Flash\UA_16_09.png" />
+    <Image Include="Res\Action\Flash\UA_16_10.png" />
+    <Image Include="Res\Action\Flash\UA_16_11.png" />
+    <Image Include="Res\Action\Flash\UA_17_01.png" />
+    <Image Include="Res\Action\Flash\UA_17_02.png" />
+    <Image Include="Res\Action\Flash\UA_17_03.png" />
+    <Image Include="Res\Action\Flash\UA_17_04.png" />
+    <Image Include="Res\Action\Flash\UA_17_05.png" />
+    <Image Include="Res\Action\Flash\UA_18_01.png" />
+    <Image Include="Res\Action\Flash\UA_18_02.png" />
+    <Image Include="Res\Action\Flash\UA_18_03.png" />
+    <Image Include="Res\Action\Flash\UA_18_04.png" />
+    <Image Include="Res\Action\Flash\UA_18_05.png" />
+    <Image Include="Res\Action\Flash\UA_18_06.png" />
+    <Image Include="Res\Action\Flash\UA_18_07.png" />
+    <Image Include="Res\Action\Flash\UA_18_08.png" />
+    <Image Include="Res\Action\Flash\UA_18_09.png" />
+    <Image Include="Res\Action\Flash\UA_19_01.png" />
+    <Image Include="Res\Action\Flash\UA_19_02.png" />
+    <Image Include="Res\Action\Flash\UA_19_03.png" />
+    <Image Include="Res\Action\Flash\UA_19_04.png" />
+    <Image Include="Res\Action\Flash\UA_19_05.png" />
+    <Image Include="Res\Action\Flash\UA_19_06.png" />
+    <Image Include="Res\Action\Flash\UA_19_07.png" />
+    <Image Include="Res\Action\Flash\UA_19_08.png" />
+    <Image Include="Res\Action\Flash\UA_19_09.png" />
+    <Image Include="Res\Action\Flash\UA_19_10.png" />
+    <Image Include="Res\Action\Flash\UA_19_11.png" />
+    <Image Include="Res\Action\Flash\UA_19_12.png" />
+    <Image Include="Res\Action\Flash\UA_1_01.png" />
+    <Image Include="Res\Action\Flash\UA_1_02.png" />
+    <Image Include="Res\Action\Flash\UA_1_03.png" />
+    <Image Include="Res\Action\Flash\UA_1_04.png" />
+    <Image Include="Res\Action\Flash\UA_1_05.png" />
+    <Image Include="Res\Action\Flash\UA_1_06.png" />
+    <Image Include="Res\Action\Flash\UA_1_07.png" />
+    <Image Include="Res\Action\Flash\UA_1_08.png" />
+    <Image Include="Res\Action\Flash\UA_1_09.png" />
+    <Image Include="Res\Action\Flash\UA_1_10.png" />
+    <Image Include="Res\Action\Flash\UA_1_11.png" />
+    <Image Include="Res\Action\Flash\UA_2_01.png" />
+    <Image Include="Res\Action\Flash\UA_2_02.png" />
+    <Image Include="Res\Action\Flash\UA_2_03.png" />
+    <Image Include="Res\Action\Flash\UA_2_04.png" />
+    <Image Include="Res\Action\Flash\UA_2_05.png" />
+    <Image Include="Res\Action\Flash\UA_2_06.png" />
+    <Image Include="Res\Action\Flash\UA_3_01.png" />
+    <Image Include="Res\Action\Flash\UA_3_02.png" />
+    <Image Include="Res\Action\Flash\UA_3_03.png" />
+    <Image Include="Res\Action\Flash\UA_3_04.png" />
+    <Image Include="Res\Action\Flash\UA_3_05.png" />
+    <Image Include="Res\Action\Flash\UA_3_06.png" />
+    <Image Include="Res\Action\Flash\UA_3_07.png" />
+    <Image Include="Res\Action\Flash\UA_3_08.png" />
+    <Image Include="Res\Action\Flash\UA_3_09.png" />
+    <Image Include="Res\Action\Flash\UA_3_10.png" />
+    <Image Include="Res\Action\Flash\UA_3_11.png" />
+    <Image Include="Res\Action\Flash\UA_4_01.png" />
+    <Image Include="Res\Action\Flash\UA_4_02.png" />
+    <Image Include="Res\Action\Flash\UA_5_01.png" />
+    <Image Include="Res\Action\Flash\UA_5_02.png" />
+    <Image Include="Res\Action\Flash\UA_5_03.png" />
+    <Image Include="Res\Action\Flash\UA_5_04.png" />
+    <Image Include="Res\Action\Flash\UA_5_05.png" />
+    <Image Include="Res\Action\Flash\UA_5_06.png" />
+    <Image Include="Res\Action\Flash\UA_5_07.png" />
+    <Image Include="Res\Action\Flash\UA_5_08.png" />
+    <Image Include="Res\Action\Flash\UA_5_09.png" />
+    <Image Include="Res\Action\Flash\UA_5_10.png" />
+    <Image Include="Res\Action\Flash\UA_5_11.png" />
+    <Image Include="Res\Action\Flash\UA_5_12.png" />
+    <Image Include="Res\Action\Flash\UA_5_13.png" />
+    <Image Include="Res\Action\Flash\UA_6_01.png" />
+    <Image Include="Res\Action\Flash\UA_6_02.png" />
+    <Image Include="Res\Action\Flash\UA_6_03.png" />
+    <Image Include="Res\Action\Flash\UA_6_04.png" />
+    <Image Include="Res\Action\Flash\UA_7_01.png" />
+    <Image Include="Res\Action\Flash\UA_7_02.png" />
+    <Image Include="Res\Action\Flash\UA_7_03.png" />
+    <Image Include="Res\Action\Flash\UA_7_04.png" />
+    <Image Include="Res\Action\Flash\UA_7_05.png" />
+    <Image Include="Res\Action\Flash\UA_7_06.png" />
+    <Image Include="Res\Action\Flash\UA_7_07.png" />
+    <Image Include="Res\Action\Flash\UA_7_08.png" />
+    <Image Include="Res\Action\Flash\UA_7_09.png" />
+    <Image Include="Res\Action\Flash\UA_7_10.png" />
+    <Image Include="Res\Action\Flash\UA_8_01.png" />
+    <Image Include="Res\Action\Flash\UA_8_02.png" />
+    <Image Include="Res\Action\Flash\UA_8_03.png" />
+    <Image Include="Res\Action\Flash\UA_8_04.png" />
+    <Image Include="Res\Action\Flash\UA_8_05.png" />
+    <Image Include="Res\Action\Flash\UA_8_06.png" />
+    <Image Include="Res\Action\Flash\UA_8_07.png" />
+    <Image Include="Res\Action\Flash\UA_8_08.png" />
+    <Image Include="Res\Action\Flash\UA_9_01.png" />
+    <Image Include="Res\Action\Flash\UA_9_02.png" />
+    <Image Include="Res\Action\Flash\UA_9_03.png" />
+    <Image Include="Res\Action\Flash\UA_9_04.png" />
+    <Image Include="Res\Action\Flash\UA_9_05.png" />
+    <Image Include="Res\Action\Flash\UA_9_06.png" />
+    <Image Include="Res\Action\Flash\UA_9_07.png" />
+    <Image Include="Res\Action\Flash\UA_9_08.png" />
+    <Image Include="Res\Action\Flash\UA_9_09.png" />
+    <Image Include="Res\Action\Flash\UA_9_10.png" />
+    <Image Include="Res\USER_READY.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GameFrame.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\GameFrame.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Res\HaveNewTask.wav" />
+    <Media Include="Res\TaskFinish.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="GameFrame.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

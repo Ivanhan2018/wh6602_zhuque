@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SonicUI", "SonicUI\SonicUI.vcproj", "{14977269-CECB-4E5D-8718-A95741785C31}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SonicUIDemo", "SonicUIDemo\SonicUIDemo.vcproj", "{4C681B4F-14C2-4329-885E-AD7F334683A9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{14977269-CECB-4E5D-8718-A95741785C31} = {14977269-CECB-4E5D-8718-A95741785C31}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{14977269-CECB-4E5D-8718-A95741785C31}.Debug.ActiveCfg = Debug|Win32
+		{14977269-CECB-4E5D-8718-A95741785C31}.Debug.Build.0 = Debug|Win32
+		{14977269-CECB-4E5D-8718-A95741785C31}.Release.ActiveCfg = Release|Win32
+		{14977269-CECB-4E5D-8718-A95741785C31}.Release.Build.0 = Release|Win32
+		{4C681B4F-14C2-4329-885E-AD7F334683A9}.Debug.ActiveCfg = Debug|Win32
+		{4C681B4F-14C2-4329-885E-AD7F334683A9}.Debug.Build.0 = Debug|Win32
+		{4C681B4F-14C2-4329-885E-AD7F334683A9}.Release.ActiveCfg = Release|Win32
+		{4C681B4F-14C2-4329-885E-AD7F334683A9}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

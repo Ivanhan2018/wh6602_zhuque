@@ -1,0 +1,302 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\GameClient.rc2""  // 非 Microsoft Visual C++ 编辑过的资源\r\n"
+    "#include ""afxres.rc""         // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\GameClient.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "Comments", "深圳市朱雀网络技术有限公司"
+            VALUE "CompanyName", "深圳市朱雀网络技术有限公司"
+            VALUE "FileDescription", "捕鱼达人"
+            VALUE "FileVersion", "1, 0, 0, 0"
+            VALUE "InternalName", "Fish.exe"
+            VALUE "LegalCopyright", "深圳市朱雀网络技术有限公司保留所有权利。"
+            VALUE "OriginalFilename", "Fish.exe"
+            VALUE "ProductName", "捕鱼达人"
+            VALUE "ProductVersion", "1, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+GAME_LOGO               BITMAP                  "Res\\GAME_LOGO.bmp"
+IDB_BT_SHOW_SHOP        BITMAP                  "res\\BulletShop\\BT_SHOW_SHOP.bmp"
+IDB_BT_QUIT_GAME        BITMAP                  "res\\ScoreView\\BT_QUIT_GAME.bmp"
+IDB_BT_QUIT_GAME_EX     BITMAP                  "res\\ScoreView\\BT_QUIT_GAME_EX.bmp"
+IDB_BT_CALC_SCORE       BITMAP                  "res\\ScoreView\\BT_CALC_SCORE.bmp"
+IDB_BT_CONTINUE_GAME    BITMAP                  "res\\scoreview\\BT_CONTINUE_GAME.bmp"
+IDB_BT_ISEE             BITMAP                  "res\\BulletShop\\BT_ISEE.bmp"
+IDB_BT_HELP             BITMAP                  "res\\Help\\BT_HELP.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CARD_CUR            CURSOR                  "res\\CARD_CUR.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPTION DIALOGEX 0, 0, 186, 137
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | 
+    WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,26,117,50,14
+    PUSHBUTTON      "取消",IDCANCEL,101,117,50,14
+    GROUPBOX        "常规配置",IDC_STATIC,22,26,138,40
+    CONTROL         "允许声音效果",IDC_ENABLE_SOUND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,35,44,86,10
+    ICON            IDR_MAINFRAME,IDC_STATIC,123,38,20,20
+    GROUPBOX        "扑克配置",IDC_STATIC,21,69,139,40
+    LTEXT           "扑克间距为",IDC_STATIC,35,86,41,8
+    LTEXT           "象素",IDC_STATIC,133,87,19,8
+    COMBOBOX        IDC_CARD_SPACE,79,85,48,109,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_SCORE DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | 
+    WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_BULLET_SHOP DIALOGEX 0, 0, 313, 182
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | 
+    WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_GAME_HELP DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "",IDC_CLOSE,61,7,50,14
+    PUSHBUTTON      "",IDC_CANNO_HELP,7,69,50,14
+    PUSHBUTTON      "",IDC_FISH_SCORE,76,69,50,14
+    PUSHBUTTON      "",IDC_BULLET_HELP,129,46,50,14
+    PUSHBUTTON      "",IDC_GAME_HELP,41,45,50,14
+END
+
+IDD_BULLET_HELP DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "",IDC_CLOSE,127,42,50,14
+END
+
+IDD_CELL_SCORE_OPTION DIALOGEX 0, 0, 213, 110
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,81,89,50,14
+    LTEXT           "游戏倍数：",IDC_STATIC,25,35,41,8
+    COMBOBOX        IDC_CELL_SCORE,71,34,48,69,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "选择不同的倍数，子弹价格会不同，渔获的金币倍数也会不同哟！",
+                    IDC_STATIC,69,56,122,20
+    LTEXT           "温馨提示：",IDC_STATIC,25,56,41,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SCORE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_BULLET_SHOP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 306
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_GAME_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_BULLET_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_CELL_SCORE_OPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+BT_BULET_HELP           PNG                     "res\\BulletShop\\BT_BULET_HELP.png"
+BT_BUY_BULET            PNG                     "res\\BulletShop\\BT_BUY_BULET.png"
+BT_RETURN               PNG                     "res\\BulletShop\\BT_RETURN.png"
+BULET100                PNG                     "res\\BulletShop\\BULET100.png"
+BULET600                PNG                     "res\\BulletShop\\BULET600.png"
+BULET800                PNG                     "res\\BulletShop\\BULET800.png"
+BULLET_SHOP_BACK        PNG                     "res\\BulletShop\\BULLET_SHOP_BACK.png"
+GAME_END_UP             PNG                     "res\\ScoreView\\GAME_END_UP.png"
+GAME_END_DOWN           PNG                     "res\\ScoreView\\GAME_END_DOWN.png"
+GAME_END_NUMBER         PNG                     "res\\ScoreView\\GAME_END_NUMBER.PNG"
+GAME_END_SCORE_NUMBER   PNG                     "res\\ScoreView\\GAME_END_SCORE_NUMBER.png"
+GAME_END_FISH           PNG                     "res\\ScoreView\\GAME_END_FISH.png"
+USERINFOBACK            PNG                     "res\\UserInfoBack.png"
+BULLET_HELP             PNG                     "res\\BulletShop\\BULLET_HELP.png"
+BT_BULLET_EFFECT        PNG                     "res\\Help\\BT_BULLET_EFFECT.png"
+BT_HELP_CLOSE           PNG                     "res\\Help\\BT_HELP_CLOSE.png"
+BT_FISH_SCORE           PNG                     "res\\Help\\BT_FISH_SCORE.png"
+BT_GAME_HELP            PNG                     "res\\Help\\BT_GAME_HELP.png"
+BT_CANNO_HELP           PNG                     "res\\Help\\BT_CANNO_HELP.png"
+FISH_SCORE              PNG                     "res\\Help\\FISH_SCORE.png"
+GAME_HELP               PNG                     "res\\Help\\GAME_HELP.png"
+CANNO_HELP              PNG                     "res\\Help\\CANNO_HELP.png"
+BULLET_EFFECT           PNG                     "res\\Help\\BULLET_EFFECT.png"
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\GameClient.rc2"  // 非 Microsoft Visual C++ 编辑过的资源
+#include "afxres.rc"         // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
