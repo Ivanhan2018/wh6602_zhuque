@@ -82,9 +82,9 @@ bool __cdecl CAttemperEngineSink::OnAttemperEngineStart(IUnknownEx * pIUnknownEx
 	//中心连接
 	DWORD dwServerIP=inet_addr(m_pInitParamter->m_szCenterServerAddr);
 
-#if 0
+#if 1
 	// dwServerIP 值是反的，网狐为何固意要用一个反值呢
-	m_pITCPSocketCorrespond->Connect(dwServerIP,PORT_CENTER_SERVER);
+	m_pITCPSocketCorrespond->Connect(ntohl(dwServerIP),PORT_CENTER_SERVER);
 #else
 	m_pITCPSocketCorrespond->Connect(m_pInitParamter->m_szCenterServerAddr,PORT_CENTER_SERVER);
 #endif
@@ -132,9 +132,9 @@ bool __cdecl CAttemperEngineSink::OnEventTimer(DWORD dwTimerID, WPARAM wBindPara
 			DWORD dwServerIP=inet_addr(m_pInitParamter->m_szCenterServerAddr);
 
 			// add by HouGuoJiang 2011-11-25
-			#if 0
+			#if 1
 				// dwServerIP 值是反的，网狐为何固意要用一个反值呢
-				m_pITCPSocketCorrespond->Connect(dwServerIP,PORT_CENTER_SERVER);
+				m_pITCPSocketCorrespond->Connect(ntohl(dwServerIP),PORT_CENTER_SERVER);
 			#else
 				m_pITCPSocketCorrespond->Connect(m_pInitParamter->m_szCenterServerAddr,PORT_CENTER_SERVER);
 			#endif
