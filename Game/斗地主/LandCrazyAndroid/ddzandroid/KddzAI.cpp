@@ -299,7 +299,8 @@ bool KddzAI::GetIsIn( const CWVector& cwCut, const CWVector& cwCards )
 
 	for ( int i = 0; i < cwCut.size(); ++i )
 	{
-		for ( int j = 0; j < cwCards.size(); ++j )
+		int j = 0;
+		for (j = 0; j < cwCards.size(); ++j )
 		{
 			if ( cwCut[i].rcard.rc == cwCards[j].rcard.rc &&
 				 cwCut[i].rcard.iNum <= cwCards[j].rcard.iNum )

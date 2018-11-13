@@ -941,6 +941,7 @@ bool CGameLogic::AnalyseCard(BYTE cbCardIndex[MAX_INDEX], tagWeaveItem WeaveItem
 		tagKindItem * pKindItem[4];
 		ZeroMemory(&pKindItem,sizeof(pKindItem));
 
+		int i=0;
 		//开始组合
 		do
 		{
@@ -1008,7 +1009,7 @@ bool CGameLogic::AnalyseCard(BYTE cbCardIndex[MAX_INDEX], tagWeaveItem WeaveItem
 			//设置索引
 			if (cbIndex[cbLessKindItem-1]==(cbKindItemCount-1))
 			{
-				for (int i=cbLessKindItem-1;i>0;i--)
+				for (i=cbLessKindItem-1;i>0;i--)
 				{
 					if ((cbIndex[i-1]+1)!=cbIndex[i])
 					{

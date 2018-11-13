@@ -69,7 +69,7 @@ void __cdecl CAndroidUserItem::SetRoomLog(cnd_ILogMgr*	pRoomLog)
 	{
 		CString strPromptNull;	
 		strPromptNull.Format("问题：m_pRoomLog=NULL ，函数名：%s  所在行：%d ",  __FUNCTION__ ,  __LINE__  );	
-		AfxMessageBox(strPromptNull);
+		//AfxMessageBox(strPromptNull);
 	}
 }
 

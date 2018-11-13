@@ -3875,8 +3875,9 @@ void CCardControl::DrawCardControl(CDC * pDC)
 	//绘画准备
 	int nXExcursion=m_ControlPoint.x+(CountArray(m_CardItemArray)-m_wCardCount)*CARD_WIDTH;
 
+	WORD i=0;
 	//绘画扑克
-	for (WORD i=0;i<m_wCardCount;i++)
+	for (i=0;i<m_wCardCount;i++)
 	{
 		//计算位置
 		int nXScreenPos=nXExcursion+CARD_WIDTH*i;

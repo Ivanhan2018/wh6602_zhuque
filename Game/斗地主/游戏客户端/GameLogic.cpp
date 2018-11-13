@@ -742,7 +742,8 @@ bool CGameLogic::SearchOutCard(const BYTE cbHandCardData[], BYTE cbHandCardCount
 
 			//Õ¨µ¯ÅÐ¶Ï
 			BYTE cbTempLogicValue=GetCardLogicValue(cbCardData[cbCardCount-i-1]);
-			for (BYTE j=1;j<4;j++)
+			BYTE j=1;
+			for (j=1;j<4;j++)
 			{
 				if (GetCardLogicValue(cbCardData[cbCardCount+j-i-1])!=cbTempLogicValue) break;
 			}

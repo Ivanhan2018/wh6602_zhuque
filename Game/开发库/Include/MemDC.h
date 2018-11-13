@@ -96,7 +96,7 @@ public:
 		m_oldBitmap = NULL;
     }
     
-   virtual draw()
+   virtual void draw()
    {        
 	   if (m_bMemDC) 
 	   {

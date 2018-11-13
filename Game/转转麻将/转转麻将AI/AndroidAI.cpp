@@ -510,7 +510,7 @@ void CAndroidAI::AnalyseThree()
 		//记录剩下的
 		m_byRemainThreeCount = 0;
 		m_nMaxScoreThree = m_nScoreThree;
-		for( i = 0; i < m_byCardCount; i++ )
+		for(int i = 0; i < m_byCardCount; i++ )
 		{
 			if( !m_bSelect[i] )
 				m_byRemainThree[m_byRemainThreeCount++] = m_byCardData[i];
@@ -606,7 +606,7 @@ void CAndroidAI::AnalyseTwo()
 		//记录剩下的
 		m_nMaxScoreTwo = m_nScoreTwo;
 		m_byRemainTwoCount = 0;
-		for( i = 0; i < m_byRemainThreeCount; i++ )
+		for(int i = 0; i < m_byRemainThreeCount; i++ )
 		{
 			if( !m_bSelect[i] )
 				m_byRemainTwo[m_byRemainTwoCount++] = m_byRemainThree[i];

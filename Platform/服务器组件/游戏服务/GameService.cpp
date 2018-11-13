@@ -46,7 +46,7 @@ void CGameService::InitSome()
 	}
 	else
 	{
-		AfxMessageBox("LogMessage.dll 组件忘记注册了吧！那样就会没有日志的哦！");
+		//AfxMessageBox("LogMessage.dll 组件忘记注册了吧！那样就会没有日志的哦！");
 	}
 }
 

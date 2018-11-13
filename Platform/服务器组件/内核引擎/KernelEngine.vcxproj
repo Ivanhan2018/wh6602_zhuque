@@ -95,7 +95,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>Ws2_32.lib;../../链接库/ComServiceD.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../../运行/Debug/KernelEngineD.dll</OutputFile>
+      <OutputFile>../../运行/ServDebug/KernelEngineD.dll</OutputFile>
       <ModuleDefinitionFile>.\KernelEngineD.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>

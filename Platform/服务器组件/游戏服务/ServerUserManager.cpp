@@ -28,12 +28,12 @@ void __cdecl CServerUserItem::SetRoomLog(cnd_ILogMgr*	pRoomLog)
 {
 	m_pRoomLog = pRoomLog;;	// 房间日志
 
-	if(!m_pRoomLog)		// 此段测试用
-	{
-		CString strPromptNull;	
-		strPromptNull.Format("问题：m_pRoomLog=NULL ，函数名：%s  所在行：%d ",  __FUNCTION__ ,  __LINE__  );	
-		AfxMessageBox(strPromptNull);
-	}
+	//if(!m_pRoomLog)		// 此段测试用
+	//{
+	//	CString strPromptNull;	
+	//	strPromptNull.Format("问题：m_pRoomLog=NULL ，函数名：%s  所在行：%d ",  __FUNCTION__ ,  __LINE__  );	
+	//	AfxMessageBox(strPromptNull);
+	//}
 }
 
 //用户胜率
@@ -473,7 +473,7 @@ void __cdecl CServerUserManager::SetRoomLog(cnd_ILogMgr*	pRoomLog)
 	{
 		CString strPromptNull;	
 		strPromptNull.Format("问题：m_pRoomLog=NULL ，函数名：%s  所在行：%d ",  __FUNCTION__ ,  __LINE__  );	
-		AfxMessageBox(strPromptNull);
+		//AfxMessageBox(strPromptNull);
 	}
 }
 

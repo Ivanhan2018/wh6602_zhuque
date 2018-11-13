@@ -1284,10 +1284,11 @@ void CTableFrameSink::UserStartOperation()
 	//œÏ”¶≈–∂œ
 	bool bAroseAction=EstimateUserRespond(m_wProvideUser,m_cbProvideCard,EstimatKind_OutCard);
 
+	WORD i=0;
 	//«¿∏‹…Ë÷√
 	if (m_bGangStatus==true)
 	{
-		for (WORD i=0;i<m_wPlayerCount;i++)
+		for (i=0;i<m_wPlayerCount;i++)
 		{
 			if ((m_cbUserAction[i]&WIK_CHI_HU)!=0) break;
 		}
