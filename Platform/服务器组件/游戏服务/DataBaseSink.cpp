@@ -685,7 +685,13 @@ bool CDataBaseSink::OnFindGemsTaskPerformFinish(DWORD dwContextID, VOID * pData,
 	{
 		DBR_TASK_Finish* pTask = (DBR_TASK_Finish*)pData;
 		ASSERT(pTask->dwUserID  !=0L);
-		ASSERT(pTask->iTaskID   !=0L);
+		//ASSERT(pTask->iTaskID   !=0L);
+		if(pTask->iTaskID==0)
+		{
+			LPCTSTR pszDescribe=_T("CDataBaseSink::OnFindGemsTaskPerformFinish pTask->iTaskID==0");
+			CTraceService::TraceString(pszDescribe,TraceLevel_Exception);		   
+			return true;
+		}
 		
 		if (pTask->bFinish)
 		{

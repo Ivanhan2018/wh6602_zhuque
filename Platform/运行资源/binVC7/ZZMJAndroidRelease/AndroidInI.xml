@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <UserID value="game" />
+    <PassWord value="a" />
+    <ServerIP value="127.0.0.1" />
+    <ServerPort value="10000" />
+    <GameID value="303" />
+    <RoomID value="1" />
+    <UserIndex value="1410" />
+    <UserNums value="3" />
+    <GameDll value="ZZMJAndroid.dll" />
+    <GameServerIP value="127.0.0.1" />
+    <GameServerPort value="3333" />
+</root>

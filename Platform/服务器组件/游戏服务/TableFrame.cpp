@@ -182,7 +182,7 @@ bool __cdecl CTableFrame::PerformStandUpAction(IServerUserItem * pIServerUserIte
 		{
 			//½áÊøÓÎÏ·
 			if(bGameStarted)
-				m_pITableFrameSink->OnEventGameEnd(wChairID,pIServerUserItem,GER_NORMAL/*GER_USER_LEFT*/);//by Ivan_han
+				m_pITableFrameSink->OnEventGameEnd(wChairID,pIServerUserItem,/*GER_NORMAL*/GER_USER_LEFT);//by Ivan_han
 
 			//Àë¿ªÅÐ¶Ï
 			tagServerUserData * pUserData=pIServerUserItem->GetUserData();
