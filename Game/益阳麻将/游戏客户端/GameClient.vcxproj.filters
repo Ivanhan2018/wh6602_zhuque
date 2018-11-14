@@ -1,0 +1,924 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CardControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgAIPrompt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameClient.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameClientDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameClientView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLogic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOption.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScoreWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageNumsyy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\开发库\Common\ThreadGuard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\开发库\Common\TraceCatch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CardControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\消息定义\CMD_Sparrow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgAIPrompt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameClientDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameClientView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLogic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOption.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScoreWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageNumsyy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Res\ACTION_BACK.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\ACTION_EXPLAIN.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_BU_TING.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_CHIHU.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_GIVEUP.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_HAI_DI.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_NO_HAI_DI.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_START.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_START_TRUSTEE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_STOP_TRUSTEE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\BT_TING_CARD.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CARD_BACK_H.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CARD_BACK_V.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CARD_HEAP_DOUBLE_H.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CARD_HEAP_DOUBLE_V.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CARD_HEAP_SINGLE_H.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CARD_HEAP_SINGLE_V.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CARD_TABLE_BOTTOM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CARD_TABLE_LEFT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CARD_TABLE_RIGHT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CARD_TABLE_TOP.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CARD_USER_BOTTOM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CARD_USER_LEFT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CARD_USER_RIGHT.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CARD_USER_TOP.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CONTROL_BOTTOM.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CONTROL_MID.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\CONTROL_TOP.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Dice.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\Dice2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GAME_LOGO.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GAME_SCORE.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\GameClient.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\HUANG_ZHUANG.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\OUT_CARD_TIP.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\USER_ACTION.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\USER_FLAG.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\VIEW_BACK.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\VIEW_BACK_CENTER.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\VIEW_BORDER.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\WAIT_TIP.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Res\ACTION_EXPLAIN.png" />
+    <Image Include="Res\BACKMP.png" />
+    <Image Include="Res\BANKER.png" />
+    <Image Include="Res\CARD.png" />
+    <Image Include="Res\CARD_BACK_H.png" />
+    <Image Include="Res\CARD_BACK_V.png" />
+    <Image Include="Res\CARD_HEAP_DOUBLE_H.png" />
+    <Image Include="Res\CARD_HEAP_DOUBLE_V.png" />
+    <Image Include="Res\CARD_HEAP_SINGLE_H.png" />
+    <Image Include="Res\CARD_HEAP_SINGLE_V.png" />
+    <Image Include="Res\CARD_HEAP_TRIPLE_H.png" />
+    <Image Include="Res\CARD_HEAP_TRIPLE_V.png" />
+    <Image Include="Res\CARD_TABLE_BOTTOM.png" />
+    <Image Include="Res\CARD_TABLE_LEFT.png" />
+    <Image Include="Res\CARD_TABLE_RIGHT.png" />
+    <Image Include="Res\CARD_TABLE_TOP.png" />
+    <Image Include="Res\CARD_USER_BOTTOM.png" />
+    <Image Include="Res\CARD_USER_LEFT.png" />
+    <Image Include="Res\CARD_USER_RIGHT.png" />
+    <Image Include="Res\CARD_USER_TOP.png" />
+    <Image Include="Res\CONTROL_BOTTOM.png" />
+    <Image Include="Res\CONTROL_MID.png" />
+    <Image Include="Res\CONTROL_TOP.png" />
+    <Image Include="Res\胡牌效果\DI_HU.png" />
+    <Image Include="Res\胡牌效果\HAI_DI.png" />
+    <Image Include="Res\HUANG_ZHUANG.png" />
+    <Image Include="Res\IMAGE_ENDTAG.png" />
+    <Image Include="Res\ImageNums.png" />
+    <Image Include="Res\胡牌效果\JIANGJIANG_HU.png" />
+    <Image Include="Res\KING_USER_BOTTOM.png" />
+    <Image Include="Res\KINGCOUNT.png" />
+    <Image Include="Res\MoPai.png" />
+    <Image Include="Res\OUT_CARD_TIP.png" />
+    <Image Include="Res\胡牌效果\PENGPENG_HU.png" />
+    <Image Include="Res\胡牌效果\QI_XIAO_DUI.png" />
+    <Image Include="Res\胡牌效果\QING_YI_SE.png" />
+    <Image Include="Res\胡牌效果\TIAN_HU.png" />
+    <Image Include="Res\TING_FLAG.png" />
+    <Image Include="Res\Trustee.png" />
+    <Image Include="Res\USER_ACTION.png" />
+    <Image Include="Res\USER_FLAG.png" />
+    <Image Include="Res\WAIT_TIP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\CARD_CUR.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\GameClient.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GameClient.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Res\A_chi_hu.wav" />
+    <Media Include="Res\A_FILL.wav" />
+    <Media Include="Res\A_gang.wav" />
+    <Media Include="Res\A_peng.wav" />
+    <Media Include="Res\A_shang.wav" />
+    <Media Include="Res\A_ting.wav" />
+    <Media Include="Res\Cs\M\CS_buzhang_M_1.wav" />
+    <Media Include="Res\Cs\M\CS_buzhang_M_2.wav" />
+    <Media Include="Res\Cs\M\CS_buzhang_M_3.wav" />
+    <Media Include="Res\Cs\W\CS_buzhang_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_buzhang_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_buzhang_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_chi_M_1.wav" />
+    <Media Include="Res\Cs\M\CS_chi_M_2.wav" />
+    <Media Include="Res\Cs\M\CS_chi_M_3.wav" />
+    <Media Include="Res\Cs\W\CS_chi_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_chi_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_chi_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_chihu_M_1.wav" />
+    <Media Include="Res\Cs\M\CS_chihu_M_2.wav" />
+    <Media Include="Res\Cs\M\CS_chihu_M_3.wav" />
+    <Media Include="Res\Cs\W\CS_chihu_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_chihu_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_chihu_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_gang_M_1.wav" />
+    <Media Include="Res\Cs\M\CS_gang_M_2.wav" />
+    <Media Include="Res\Cs\M\CS_gang_M_3.wav" />
+    <Media Include="Res\Cs\W\CS_gang_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_gang_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_gang_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_peng_M_1.wav" />
+    <Media Include="Res\Cs\M\CS_peng_M_2.wav" />
+    <Media Include="Res\Cs\M\CS_peng_M_3.wav" />
+    <Media Include="Res\Cs\W\CS_peng_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_peng_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_peng_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tiao1_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao1_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao1_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tiao1_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tiao1_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tiao1_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tiao2_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao2_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao2_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tiao2_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tiao2_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tiao2_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tiao3_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao3_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao3_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tiao3_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tiao3_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tiao3_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tiao4_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao4_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao4_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tiao4_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tiao4_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tiao4_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tiao5_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao5_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao5_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tiao5_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tiao5_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tiao5_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tiao6_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao6_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao6_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tiao6_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tiao6_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tiao6_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tiao7_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao7_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao7_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tiao7_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tiao7_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tiao7_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tiao8_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao8_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao8_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tiao8_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tiao8_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tiao8_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tiao9_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao9_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tiao9_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tiao9_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tiao9_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tiao9_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tong1_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tong1_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tong1_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tong1_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tong1_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tong1_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tong2_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tong2_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tong2_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tong2_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tong2_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tong2_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tong3_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tong3_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tong3_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tong3_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tong3_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tong3_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tong4_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tong4_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tong4_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tong4_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tong4_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tong4_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tong5_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tong5_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tong5_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tong5_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tong5_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tong5_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tong6_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tong6_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tong6_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tong6_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tong6_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tong6_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tong7_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tong7_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tong7_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tong7_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tong7_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tong7_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tong8_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tong8_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tong8_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tong8_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tong8_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tong8_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_tong9_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_tong9_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_tong9_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_tong9_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_tong9_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_tong9_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_wang1_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_wang1_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_wang1_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_wang1_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_wang1_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_wang1_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_wang2_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_wang2_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_wang2_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_wang2_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_wang2_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_wang2_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_wang3_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_wang3_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_wang3_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_wang3_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_wang3_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_wang3_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_wang4_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_wang4_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_wang4_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_wang4_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_wang4_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_wang4_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_wang5_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_wang5_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_wang5_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_wang5_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_wang5_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_wang5_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_wang6_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_wang6_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_wang6_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_wang6_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_wang6_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_wang6_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_wang7_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_wang7_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_wang7_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_wang7_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_wang7_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_wang7_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_wang8_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_wang8_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_wang8_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_wang8_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_wang8_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_wang8_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_wang9_M_1.WAV" />
+    <Media Include="Res\Cs\M\CS_wang9_M_2.WAV" />
+    <Media Include="Res\Cs\M\CS_wang9_M_3.WAV" />
+    <Media Include="Res\Cs\W\CS_wang9_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_wang9_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_wang9_W_3.wav" />
+    <Media Include="Res\Cs\M\CS_zimo_M_1.wav" />
+    <Media Include="Res\Cs\M\CS_zimo_M_2.wav" />
+    <Media Include="Res\Cs\M\CS_zimo_M_3.wav" />
+    <Media Include="Res\Cs\W\CS_zimo_W_1.wav" />
+    <Media Include="Res\Cs\W\CS_zimo_W_2.wav" />
+    <Media Include="Res\Cs\W\CS_zimo_W_3.wav" />
+    <Media Include="Res\Game_end.wav" />
+    <Media Include="Res\GAME_LOST.wav" />
+    <Media Include="Res\Game_start.wav" />
+    <Media Include="Res\Game_warn.wav" />
+    <Media Include="Res\GAME_WIN.wav" />
+    <Media Include="Res\Gy\M\GY_buzhang_M_1.wav" />
+    <Media Include="Res\Gy\M\GY_buzhang_M_2.wav" />
+    <Media Include="Res\Gy\M\GY_buzhang_M_3.wav" />
+    <Media Include="Res\Gy\W\GY_buzhang_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_buzhang_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_buzhang_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_chi_M_1.wav" />
+    <Media Include="Res\Gy\M\GY_chi_M_2.wav" />
+    <Media Include="Res\Gy\M\GY_chi_M_3.wav" />
+    <Media Include="Res\Gy\W\GY_chi_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_chi_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_chi_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_chihu_M_1.wav" />
+    <Media Include="Res\Gy\M\GY_chihu_M_2.wav" />
+    <Media Include="Res\Gy\M\GY_chihu_M_3.wav" />
+    <Media Include="Res\Gy\W\GY_chihu_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_chihu_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_chihu_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_gang_M_1.wav" />
+    <Media Include="Res\Gy\M\GY_gang_M_2.wav" />
+    <Media Include="Res\Gy\M\GY_gang_M_3.wav" />
+    <Media Include="Res\Gy\W\GY_gang_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_gang_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_gang_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_peng_M_1.wav" />
+    <Media Include="Res\Gy\M\GY_peng_M_2.wav" />
+    <Media Include="Res\Gy\M\GY_peng_M_3.wav" />
+    <Media Include="Res\Gy\W\GY_peng_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_peng_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_peng_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tiao1_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao1_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao1_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tiao1_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tiao1_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tiao1_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tiao2_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao2_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao2_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tiao2_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tiao2_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tiao2_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tiao3_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao3_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao3_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tiao3_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tiao3_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tiao3_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tiao4_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao4_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao4_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tiao4_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tiao4_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tiao4_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tiao5_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao5_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao5_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tiao5_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tiao5_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tiao5_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tiao6_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao6_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao6_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tiao6_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tiao6_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tiao6_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tiao7_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao7_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao7_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tiao7_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tiao7_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tiao7_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tiao8_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao8_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao8_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tiao8_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tiao8_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tiao8_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tiao9_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao9_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tiao9_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tiao9_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tiao9_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tiao9_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tong1_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tong1_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tong1_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tong1_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tong1_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tong1_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tong2_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tong2_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tong2_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tong2_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tong2_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tong2_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tong3_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tong3_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tong3_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tong3_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tong3_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tong3_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tong4_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tong4_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tong4_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tong4_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tong4_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tong4_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tong5_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tong5_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tong5_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tong5_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tong5_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tong5_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tong6_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tong6_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tong6_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tong6_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tong6_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tong6_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tong7_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tong7_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tong7_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tong7_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tong7_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tong7_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tong8_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tong8_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tong8_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tong8_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tong8_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tong8_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_tong9_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_tong9_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_tong9_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_tong9_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_tong9_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_tong9_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_wang1_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_wang1_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_wang1_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_wang1_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_wang1_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_wang1_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_wang2_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_wang2_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_wang2_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_wang2_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_wang2_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_wang2_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_wang3_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_wang3_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_wang3_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_wang3_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_wang3_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_wang3_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_wang4_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_wang4_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_wang4_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_wang4_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_wang4_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_wang4_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_wang5_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_wang5_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_wang5_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_wang5_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_wang5_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_wang5_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_wang6_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_wang6_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_wang6_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_wang6_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_wang6_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_wang6_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_wang7_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_wang7_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_wang7_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_wang7_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_wang7_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_wang7_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_wang8_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_wang8_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_wang8_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_wang8_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_wang8_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_wang8_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_wang9_M_1.WAV" />
+    <Media Include="Res\Gy\M\GY_wang9_M_2.WAV" />
+    <Media Include="Res\Gy\M\GY_wang9_M_3.WAV" />
+    <Media Include="Res\Gy\W\GY_wang9_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_wang9_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_wang9_W_3.wav" />
+    <Media Include="Res\Gy\M\GY_zimo_M_1.wav" />
+    <Media Include="Res\Gy\M\GY_zimo_M_2.wav" />
+    <Media Include="Res\Gy\M\GY_zimo_M_3.wav" />
+    <Media Include="Res\Gy\W\GY_zimo_W_1.wav" />
+    <Media Include="Res\Gy\W\GY_zimo_W_2.wav" />
+    <Media Include="Res\Gy\W\GY_zimo_W_3.wav" />
+    <Media Include="Res\OUT_CARD.wav" />
+    <Media Include="Res\S_1.wav" />
+    <Media Include="Res\S_2.wav" />
+    <Media Include="Res\S_3.wav" />
+    <Media Include="Res\S_4.wav" />
+    <Media Include="Res\S_5.wav" />
+    <Media Include="Res\S_6.wav" />
+    <Media Include="Res\S_7.wav" />
+    <Media Include="Res\S_8.wav" />
+    <Media Include="Res\S_9.wav" />
+    <Media Include="Res\T_1.wav" />
+    <Media Include="Res\T_2.wav" />
+    <Media Include="Res\T_3.wav" />
+    <Media Include="Res\T_4.wav" />
+    <Media Include="Res\T_5.wav" />
+    <Media Include="Res\T_6.wav" />
+    <Media Include="Res\T_7.wav" />
+    <Media Include="Res\T_8.wav" />
+    <Media Include="Res\T_9.wav" />
+    <Media Include="Res\W_1.wav" />
+    <Media Include="Res\W_2.wav" />
+    <Media Include="Res\W_3.wav" />
+    <Media Include="Res\W_4.wav" />
+    <Media Include="Res\W_5.wav" />
+    <Media Include="Res\W_6.wav" />
+    <Media Include="Res\W_7.wav" />
+    <Media Include="Res\W_8.wav" />
+    <Media Include="Res\W_9.wav" />
+    <Media Include="Res\Yy\M\YY_buzhang_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_buzhang_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_buzhang_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_buzhang_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_buzhang_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_buzhang_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_chi_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_chi_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_chi_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_chi_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_chi_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_chi_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_chihu_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_chihu_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_chihu_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_chihu_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_chihu_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_chihu_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_gang_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_gang_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_gang_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_gang_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_gang_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_gang_W_3.wav" />
+    <Media Include="Res\Yy\闲话\M\YY_King_M_1.wav" />
+    <Media Include="Res\Yy\闲话\W\YY_King_W_1.wav" />
+    <Media Include="Res\Yy\M\YY_peng_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_peng_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_peng_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_peng_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_peng_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_peng_W_3.wav" />
+    <Media Include="Res\Yy\闲话\M\YY_Rand_M_1.wav" />
+    <Media Include="Res\Yy\闲话\M\YY_Rand_M_2.wav" />
+    <Media Include="Res\Yy\闲话\M\YY_Rand_M_3.wav" />
+    <Media Include="Res\Yy\闲话\M\YY_Rand_M_4.wav" />
+    <Media Include="Res\Yy\闲话\W\YY_Rand_W_1.wav" />
+    <Media Include="Res\Yy\闲话\W\YY_Rand_W_2.wav" />
+    <Media Include="Res\Yy\闲话\W\YY_Rand_W_3.wav" />
+    <Media Include="Res\Yy\闲话\W\YY_Rand_W_4.wav" />
+    <Media Include="Res\Yy\M\YY_tiao1_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tiao1_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tiao1_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tiao1_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tiao1_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tiao1_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tiao2_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tiao2_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tiao2_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tiao2_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tiao2_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tiao2_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tiao3_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tiao3_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tiao3_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tiao3_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tiao3_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tiao3_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tiao4_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tiao4_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tiao4_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tiao4_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tiao4_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tiao4_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tiao5_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tiao5_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tiao5_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tiao5_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tiao5_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tiao5_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tiao6_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tiao6_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tiao6_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tiao6_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tiao6_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tiao6_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tiao7_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tiao7_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tiao7_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tiao7_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tiao7_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tiao7_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tiao8_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tiao8_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tiao8_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tiao8_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tiao8_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tiao8_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tiao9_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tiao9_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tiao9_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tiao9_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tiao9_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tiao9_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tong1_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tong1_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tong1_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tong1_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tong1_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tong1_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tong2_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tong2_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tong2_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tong2_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tong2_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tong2_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tong3_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tong3_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tong3_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tong3_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tong3_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tong3_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tong4_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tong4_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tong4_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tong4_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tong4_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tong4_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tong5_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tong5_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tong5_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tong5_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tong5_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tong5_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tong6_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tong6_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tong6_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tong6_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tong6_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tong6_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tong7_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tong7_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tong7_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tong7_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tong7_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tong7_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tong8_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tong8_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tong8_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tong8_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tong8_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tong8_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_tong9_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_tong9_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_tong9_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_tong9_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_tong9_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_tong9_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_wang1_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_wang1_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_wang1_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_wang1_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_wang1_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_wang1_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_wang2_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_wang2_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_wang2_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_wang2_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_wang2_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_wang2_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_wang3_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_wang3_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_wang3_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_wang3_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_wang3_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_wang3_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_wang4_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_wang4_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_wang4_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_wang4_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_wang4_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_wang4_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_wang5_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_wang5_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_wang5_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_wang5_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_wang5_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_wang5_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_wang6_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_wang6_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_wang6_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_wang6_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_wang6_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_wang6_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_wang7_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_wang7_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_wang7_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_wang7_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_wang7_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_wang7_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_wang8_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_wang8_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_wang8_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_wang8_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_wang8_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_wang8_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_wang9_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_wang9_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_wang9_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_wang9_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_wang9_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_wang9_W_3.wav" />
+    <Media Include="Res\Yy\M\YY_zimo_M_1.wav" />
+    <Media Include="Res\Yy\M\YY_zimo_M_2.wav" />
+    <Media Include="Res\Yy\M\YY_zimo_M_3.wav" />
+    <Media Include="Res\Yy\W\YY_zimo_W_1.wav" />
+    <Media Include="Res\Yy\W\YY_zimo_W_2.wav" />
+    <Media Include="Res\Yy\W\YY_zimo_W_3.wav" />
+  </ItemGroup>
+</Project>

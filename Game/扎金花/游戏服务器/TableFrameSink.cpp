@@ -149,11 +149,11 @@ bool __cdecl CTableFrameSink::OnEventGameStart()
 		if (pIServerUserItem==NULL) continue;
 
 		const tagUserScore * pUserScore=pIServerUserItem->GetUserScore();
-		ASSERT(pUserScore->lGems>=m_pGameServiceOption->lCellScore);
+		ASSERT(pUserScore->lGem>=m_pGameServiceOption->lCellScore);
 
 		//设置变量
 		m_cbPlayStatus[i]=TRUE;
-		m_lUserMaxScore[i]=pUserScore->lGems;
+		m_lUserMaxScore[i]=pUserScore->lGem;
 
 		////判断单注
 		//LONGLONG Temp=lTimes;

@@ -11,6 +11,13 @@
 //游戏桌子类
 class CTableFrameSink : public ITableFrameSink
 {
+private:
+	//cnd_ILogMgr*	m_pRoomLog;	// 日志组件的指针
+
+public:
+	// GameSerivce.dll 通向游戏服务端的通道，可以传递任何简易数据或成员指针
+	virtual bool channel_to_game_service(int iMainCode, int iAssistantCode, void* pData, int iDataLen){return true;};
+
 	//游戏变量
 protected:
 	BYTE							m_bOperaCount;							//操作次数
