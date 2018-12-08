@@ -88,7 +88,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>..\..\开发库\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;ANDROID_GAME_FRAME_EX_DEF___;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;ANDROID_GAME_FRAME_EX_DEF___;GAME_LOAD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <PrecompiledHeader />
@@ -97,7 +97,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>AndroidGameFrame.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>D:\项目\运行\release\ZJHAndroid.dll</OutputFile>
+      <OutputFile>../../../Platform/运行/AndroidRelease/ZJHAndroid.dll</OutputFile>
       <AdditionalLibraryDirectories>.\..\..\开发库\Lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\DDZAndroidGame.def</ModuleDefinitionFile>
       <GenerateDebugInformation>false</GenerateDebugInformation>

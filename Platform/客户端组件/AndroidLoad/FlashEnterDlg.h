@@ -7,8 +7,8 @@
 #include "GameServer.h"
 #include "afxwin.h"
 #include "afxcmn.h"
-#include "xmlfile.h"
-
+//#include "xmlfile.h"
+#include "xmlparse.h"
 
 // CFlashEnterDlg ¶Ô»°¿ò
 class CFlashEnterDlg : public CDialog
@@ -91,6 +91,6 @@ private:
 
 
 private:
-	CXmlFile*	m_XmlFile;
-	
+	//CXmlFile*	m_XmlFile;
+	CXMLParse xmlParse;
 };

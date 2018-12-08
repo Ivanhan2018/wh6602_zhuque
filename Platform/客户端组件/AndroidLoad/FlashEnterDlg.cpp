@@ -7,7 +7,7 @@
 #include ".\flashenterdlg.h"
 #include "GlobalUnits.h"
 #include "GameUserInfo.h"
-#include "XMLManager.h"
+//#include "XMLManager.h"
 #include <string>
 
 #ifdef _DEBUG
@@ -26,7 +26,7 @@ CFlashEnterDlg::CFlashEnterDlg(CWnd* pParent /*=NULL*/)
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 	m_pGameLogon = NULL;
 	m_dwListCountItem = 0;
-	m_XmlFile = NULL;
+	//m_XmlFile = NULL;
 }
 
 void CFlashEnterDlg::DoDataExchange(CDataExchange* pDX)
@@ -126,56 +126,56 @@ BOOL CFlashEnterDlg::OnInitDialog()
 	m_GameServerIP.SetAddress(192, 168, 1, 108);
 	m_GameServerPort.SetWindowText("10000");
 
-	m_XmlFile = NULL;
-	m_XmlFile = CXMLManager::GetInstance()->OpenXMLFile("AndroidInI.xml");
-	if (NULL != m_XmlFile)
+	//m_XmlFile = NULL;
+	//m_XmlFile = CXMLManager::GetInstance()->OpenXMLFile("AndroidInI.xml");
+	//if (NULL != m_XmlFile)
+	if(xmlParse.ReadXMLFile("AndroidInI.xml")==TRUE)
 	{//获取信息
 		std:string strValue = "";
-		m_XmlFile->getValue("UserID", strValue, "test");
+		//m_XmlFile->getValue("UserID", strValue, "test");
+		xmlParse.getValue("UserID", strValue, "test");
 		m_UserID.SetWindowText(strValue.c_str());
 
 		strValue = "";
-		m_XmlFile->getValue("PassWord", strValue, "a");
+		xmlParse.getValue("PassWord", strValue, "a");
 		m_UserPassWord.SetWindowText(strValue.c_str());
 
 		strValue = "";
-		m_XmlFile->getValue("ServerIP", strValue, "192.168.1.108");
+		xmlParse.getValue("ServerIP", strValue, "192.168.1.108");
 		m_ServerIP.SetWindowText(strValue.c_str());
 
 		strValue = "";
-		m_XmlFile->getValue("ServerPort", strValue, "10000");
+		xmlParse.getValue("ServerPort", strValue, "10000");
 		m_ServerPort.SetWindowText(strValue.c_str());
 
 		strValue = "";
-		m_XmlFile->getValue("GameID", strValue, "10");
+		xmlParse.getValue("GameID", strValue, "10");
 		m_GameID.SetWindowText(strValue.c_str());
 
 		strValue = "";
-		m_XmlFile->getValue("RoomID", strValue, "1");
+		xmlParse.getValue("RoomID", strValue, "1");
 		m_RoomID.SetWindowText(strValue.c_str());
 
 		strValue = "";
-		m_XmlFile->getValue("UserIndex", strValue, "0");
+		xmlParse.getValue("UserIndex", strValue, "0");
 		m_UserIndex.SetWindowText(strValue.c_str());
 
 		strValue = "";
-		m_XmlFile->getValue("UserNums", strValue, "0");
+		xmlParse.getValue("UserNums", strValue, "0");
 		m_TotalUserNums.SetWindowText(strValue.c_str());
 
 		strValue = "";
-		m_XmlFile->getValue("GameDll", strValue, "0");
+		xmlParse.getValue("GameDll", strValue, "0");
 		m_GameDLL.SetWindowText(strValue.c_str());
 
 		strValue = "";
-		m_XmlFile->getValue("GameServerIP", strValue, "192.168.1.108");
+		xmlParse.getValue("GameServerIP", strValue, "192.168.1.108");
 		m_GameServerIP.SetWindowText(strValue.c_str());
 
 		strValue = "";
-		m_XmlFile->getValue("GameServerPort", strValue, "10000");
+		xmlParse.getValue("GameServerPort", strValue, "10000");
 		m_GameServerPort.SetWindowText(strValue.c_str());
 	}
-
-	
 
 	m_ConnectLogonServer.EnableWindow(TRUE);
 	m_ResetUserData.EnableWindow(FALSE);
@@ -391,51 +391,54 @@ void CFlashEnterDlg::OnBnClickedBtLogonConnect()
 		return;
 	}
 
-	if (NULL != m_XmlFile)
+	//if (NULL != m_XmlFile)
 	{//获取信息
 		CString strValue="";
 		m_UserID.GetWindowText(strValue);
-		m_XmlFile->setValue("UserID", strValue.GetBuffer());
+		//m_XmlFile->setValue("UserID", strValue.GetBuffer());
+		xmlParse.setValue("UserID", strValue.GetBuffer());
 
 		strValue="";
 		m_UserPassWord.GetWindowText(strValue);
-		m_XmlFile->setValue("PassWord", strValue.GetBuffer());
+		xmlParse.setValue("PassWord", strValue.GetBuffer());
 
 		strValue="";
 		m_ServerIP.GetWindowText(strValue);
-		m_XmlFile->setValue("ServerIP", strValue.GetBuffer());
+		xmlParse.setValue("ServerIP", strValue.GetBuffer());
 
 		strValue="";
 		m_ServerPort.GetWindowText(strValue);
-		m_XmlFile->setValue("ServerPort", strValue.GetBuffer());
+		xmlParse.setValue("ServerPort", strValue.GetBuffer());
 
 		strValue="";
 		m_GameID.GetWindowText(strValue);
-		m_XmlFile->setValue("GameID", strValue.GetBuffer());
+		xmlParse.setValue("GameID", strValue.GetBuffer());
 
 		strValue="";
 		m_RoomID.GetWindowText(strValue);
-		m_XmlFile->setValue("RoomID", strValue.GetBuffer());
+		xmlParse.setValue("RoomID", strValue.GetBuffer());
 
 		strValue="";
 		m_UserIndex.GetWindowText(strValue);
-		m_XmlFile->setValue("UserIndex", strValue.GetBuffer());
+		xmlParse.setValue("UserIndex", strValue.GetBuffer());
 
 		strValue="";
 		m_TotalUserNums.GetWindowText(strValue);
-		m_XmlFile->setValue("UserNums", strValue.GetBuffer());
+		xmlParse.setValue("UserNums", strValue.GetBuffer());
 
 		strValue="";
 		m_GameDLL.GetWindowText(strValue);
-		m_XmlFile->setValue("GameDll", strValue.GetBuffer());
+		xmlParse.setValue("GameDll", strValue.GetBuffer());
 
 		strValue="";
 		m_GameServerIP.GetWindowText(strValue);
-		m_XmlFile->setValue("GameServerIP", strValue.GetBuffer());
+		xmlParse.setValue("GameServerIP", strValue.GetBuffer());
 
 		strValue="";
 		m_GameServerPort.GetWindowText(strValue);
-		m_XmlFile->setValue("GameServerPort", strValue.GetBuffer());
+		xmlParse.setValue("GameServerPort", strValue.GetBuffer());
+
+		BOOL iRet=xmlParse.WriteXMLFile("AndroidInI.xml");
 	}
 
 	if (NULL != m_pGameLogon)

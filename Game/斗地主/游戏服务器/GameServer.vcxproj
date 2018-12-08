@@ -113,7 +113,7 @@
       <GenerateMapFile>true</GenerateMapFile>
       <MapExports>true</MapExports>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>D:\wh6602_zhuque\Platform\链接库\GameServerD.lib</ImportLibrary>
+      <ImportLibrary>../../../Platform\链接库\GameServerD.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <Midl>

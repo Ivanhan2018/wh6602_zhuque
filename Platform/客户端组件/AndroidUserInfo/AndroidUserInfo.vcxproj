@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>诈金花服务端</ProjectName>
-    <ProjectGuid>{CA071FF5-97BF-42C3-99AF-FE8F8A0F0AF2}</ProjectGuid>
+    <ProjectGuid>{1D15D4A3-E19A-413F-9E34-38E90163C5C0}</ProjectGuid>
+    <RootNamespace>AndroidUserInfo</RootNamespace>
     <Keyword>MFCDLLProj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -39,40 +39,43 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+    <_ProjectFileVersion>11.0.61030.0</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>Debug\</OutDir>
-    <IntDir>Debug\</IntDir>
+    <OutDir>../../临时文件/$(ProjectName)/Debug\</OutDir>
+    <IntDir>../../临时文件/$(ProjectName)/Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>Release\</OutDir>
-    <IntDir>Release\</IntDir>
+    <OutDir>../../临时文件/$(ProjectName)/Release\</OutDir>
+    <IntDir>../../临时文件/$(ProjectName)/Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_AFXEXT;GAME_LOAD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;ANDROID_USER_INFO_EX_DEF___;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\..\开发库\Include\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <OutputFile>../../../Platform/运行/ServDebug/ZaJinHuaServer.dll</OutputFile>
-      <ModuleDefinitionFile />
+      <AdditionalDependencies>../../链接库/ComServiceD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../运行/androiddebug/AndroidUserInfoD.dll</OutputFile>
+      <ModuleDefinitionFile>.\AndroidUserInfo.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(TargetDir)/$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)GameServer.lib</ImportLibrary>
+      <ImportLibrary>../../链接库/AndroidUserInfoD.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalLibraryDirectories>..\..\开发库\Lib\;</AdditionalLibraryDirectories>
-      <AdditionalDependencies>KernelEngineD.lib;</AdditionalDependencies>
     </Link>
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -87,24 +90,23 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\开发库\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_AFXEXT;GAME_LOAD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;ANDROID_USER_INFO_EX_DEF___;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>KernelEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../../../Platform/运行/ServRelease\ZaJinHuaServer.DLL</OutputFile>
-      <AdditionalLibraryDirectories>..\..\开发库\Lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ModuleDefinitionFile />
+      <AdditionalDependencies>../../链接库/ComService.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../运行/androidrelease/AndroidUserInfo.dll</OutputFile>
+      <ModuleDefinitionFile>.\AndroidUserInfo.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <ImportLibrary>$(OutDir)GameServer.lib</ImportLibrary>
+      <ImportLibrary>../../链接库/AndroidUserInfo.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <Midl>
@@ -118,29 +120,28 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GameLogic.cpp" />
-    <ClCompile Include="GameServer.cpp" />
-    <ClCompile Include="GameServerManager.cpp" />
-    <ClCompile Include="Stdafx.cpp">
+    <ClCompile Include="AndroidUserInfo.cpp" />
+    <ClCompile Include="GameUserInfo.cpp" />
+    <ClCompile Include="GlobalUnits.cpp" />
+    <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="TableFrameSink.cpp">
-      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameLogic.h" />
-    <ClInclude Include="GameServerManager.h" />
+    <None Include="AndroidUserInfo.def" />
+    <None Include="res\AndroidUserInfo.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AndroidUserInfo.h" />
+    <ClInclude Include="AndroidUserInfoEx.h" />
+    <ClInclude Include="GameUserInfo.h" />
+    <ClInclude Include="GlobalUnits.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="Stdafx.h" />
-    <ClInclude Include="TableFrameSink.h" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="GameServer.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\GameServer.rc2" />
+    <ResourceCompile Include="AndroidUserInfo.rc" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />

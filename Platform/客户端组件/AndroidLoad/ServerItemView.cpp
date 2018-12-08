@@ -143,15 +143,15 @@ CServerListManager::~CServerListManager()
 	m_PtrArrayType.RemoveAll();
 
 	nCount=m_PtrArrayKind.GetCount();
-	for (i=0;i<nCount;i++) delete m_PtrArrayKind[i];
+	for (int i=0;i<nCount;i++) delete m_PtrArrayKind[i];
 	m_PtrArrayKind.RemoveAll();
 
 	nCount=m_PtrArrayStation.GetCount();
-	for (i=0;i<nCount;i++) delete m_PtrArrayStation[i];
+	for (int i=0;i<nCount;i++) delete m_PtrArrayStation[i];
 	m_PtrArrayStation.RemoveAll();
 
 	nCount=m_PtrArrayServer.GetCount();
-	for (i=0;i<nCount;i++) delete m_PtrArrayServer[i];
+	for (int i=0;i<nCount;i++) delete m_PtrArrayServer[i];
 	m_PtrArrayServer.RemoveAll();
 
 	return;
