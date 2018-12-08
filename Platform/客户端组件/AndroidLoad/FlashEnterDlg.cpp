@@ -19,6 +19,39 @@
 
 using namespace std;
 
+string GetAppName()
+{
+	HINSTANCE hInst = NULL;
+	hInst = (HINSTANCE)GetModuleHandleA(NULL);
+
+	CHAR path_buffer[_MAX_PATH];
+	GetModuleFileNameA(hInst, path_buffer, sizeof(path_buffer));//得到exe文件的全路径 
+	string strPath;
+
+	strPath = path_buffer;
+
+	//只提出文件的路径，不要文件名
+	int pos = strPath.find_last_of("\\");
+	strPath = strPath.substr(pos + 1, strPath.size() - pos - 1);
+
+	//去掉.exe
+	int pos1 = strPath.find_last_of(".");
+	strPath = strPath.substr(0, pos1);
+
+	return strPath;
+}
+
+string GetXmlName()
+{
+	std::string pathKey = "AndroidInI.xml";
+#ifdef WIN32
+	pathKey = GetAppName() + ".xml";
+	// Load替换为InI
+	const char*sz1="Load"; 
+	pathKey.replace(pathKey.find(sz1,0),strlen(sz1),"InI");
+#endif
+	return pathKey;
+}
 
 CFlashEnterDlg::CFlashEnterDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CFlashEnterDlg::IDD, pParent)
@@ -129,7 +162,8 @@ BOOL CFlashEnterDlg::OnInitDialog()
 	//m_XmlFile = NULL;
 	//m_XmlFile = CXMLManager::GetInstance()->OpenXMLFile("AndroidInI.xml");
 	//if (NULL != m_XmlFile)
-	if(xmlParse.ReadXMLFile("AndroidInI.xml")==TRUE)
+	string str=GetXmlName();
+	if(xmlParse.ReadXMLFile((TCHAR *)str.c_str())==TRUE)
 	{//获取信息
 		std:string strValue = "";
 		//m_XmlFile->getValue("UserID", strValue, "test");
@@ -438,7 +472,8 @@ void CFlashEnterDlg::OnBnClickedBtLogonConnect()
 		m_GameServerPort.GetWindowText(strValue);
 		xmlParse.setValue("GameServerPort", strValue.GetBuffer());
 
-		BOOL iRet=xmlParse.WriteXMLFile("AndroidInI.xml");
+	    string str=GetXmlName();
+		BOOL iRet=xmlParse.WriteXMLFile((TCHAR *)str.c_str());
 	}
 
 	if (NULL != m_pGameLogon)
