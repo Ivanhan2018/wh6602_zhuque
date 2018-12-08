@@ -91,7 +91,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <OutputFile>../../运行/ClientRelease/SonicUI.dll</OutputFile>
+      <OutputFile>$(ProjectDir)../../../运行/ClientRelease/SonicUI.dll</OutputFile>
       <AdditionalLibraryDirectories>../lib;./lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>false</GenerateDebugInformation>
