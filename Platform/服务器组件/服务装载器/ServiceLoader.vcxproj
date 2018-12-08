@@ -112,9 +112,8 @@
       <MkTypLibCompatible>false</MkTypLibCompatible>
     </Midl>
     <PostBuildEvent>
-      <Command>mkdir ..\..\发布组件\服务器组件\ServRelease
-copy /y ..\..\运行\ServRelease\$(TargetFileName) ..\..\发布组件\服务器组件\ServRelease\$(TargetFileName)
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>

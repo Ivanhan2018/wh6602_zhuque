@@ -122,9 +122,8 @@
       <MkTypLibCompatible>false</MkTypLibCompatible>
     </Midl>
     <PostBuildEvent>
-      <Command>mkdir ..\..\发布组件\客户端组件\ClientRelease
-copy /y ..\..\运行\ClientRelease\$(TargetFileName) ..\..\发布组件\客户端组件\ClientRelease\$(TargetFileName)
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>

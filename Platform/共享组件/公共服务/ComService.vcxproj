@@ -84,9 +84,7 @@
     </Midl>
     <PostBuildEvent>
       <Command>
-
-
-</Command>
+      </Command>
     </PostBuildEvent>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -120,15 +118,8 @@
       <MkTypLibCompatible>false</MkTypLibCompatible>
     </Midl>
     <PostBuildEvent>
-      <Command>mkdir ..\..\运行\ClientRelease
-copy /y ..\..\运行\ServRelease\$(TargetFileName) ..\..\运行\ClientRelease\$(TargetFileName)
-
-mkdir ..\..\发布组件\服务器组件\ServRelease
-mkdir ..\..\发布组件\客户端组件\ClientRelease
-copy /y ..\..\运行\ServRelease\$(TargetFileName) ..\..\发布组件\服务器组件\ServRelease\$(TargetFileName)
-copy /y ..\..\运行\ServRelease\$(TargetFileName) ..\..\发布组件\客户端组件\ClientRelease\$(TargetFileName)
-
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>

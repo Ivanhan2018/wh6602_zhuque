@@ -129,7 +129,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>Ws2_32.lib;../../链接库/ComService.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../../运行/Release/KernelEngine.dll</OutputFile>
+      <OutputFile>../../运行/ServRelease/KernelEngine.dll</OutputFile>
       <ModuleDefinitionFile>.\KernelEngine.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -141,9 +141,8 @@
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir ..\..\发布组件\服务器组件\Release
-copy /y ..\..\运行\Release\$(TargetFileName) ..\..\发布组件\服务器组件\Release\$(TargetFileName)
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Admin_Release|Win32'">

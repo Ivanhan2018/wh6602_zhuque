@@ -63,7 +63,7 @@
       <CallingConvention>Cdecl</CallingConvention>
     </ClCompile>
     <Link>
-      <OutputFile>../../运行/ClientDebug/SonicUID.dll</OutputFile>
+      <OutputFile>$(ProjectDir)../../../运行/ClientDebug/SonicUID.dll</OutputFile>
       <AdditionalLibraryDirectories>../lib;./lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(TargetDir)/$(TargetName).pdb</ProgramDatabaseFile>
@@ -102,9 +102,8 @@
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir ..\..\..\发布组件\客户端组件\ClientRelease
-copy /y ..\..\..\运行\ClientRelease\$(TargetFileName) ..\..\..\发布组件\客户端组件\ClientRelease\$(TargetFileName)
-</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
