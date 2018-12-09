@@ -4,7 +4,7 @@
 #pragma once
 
 #include "Stdafx.h"
-#include "InitParamter.h"
+#include "ServerParameter.h"
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -26,7 +26,7 @@ class CAttemperEngineSink : public IAttemperEngineSink
 
 	//配置变量
 protected:
-	CInitParamter *					m_pInitParamter;					//配置参数
+	CServerParameter *				m_pInitParamter;					//配置参数
 	tagBindParameter *				m_pBindParameter;					//连接信息
 
 	//接口变量

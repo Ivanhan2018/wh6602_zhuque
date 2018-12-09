@@ -4,7 +4,7 @@
 #pragma once
 
 #include "Stdafx.h"
-#include "InitParamter.h"
+#include "ServerParameter.h"
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -16,7 +16,7 @@ class CDataBaseSink : public IDataBaseEngineSink
 
 	//变量定义
 protected:
-	CInitParamter *					m_pInitParamter;					//配置参数
+	CServerParameter *				m_pInitParamter;					//配置参数
 	IDataBaseEngineEvent *			m_pIDataBaseEngineEvent;			//数据事件
 
 	//函数定义

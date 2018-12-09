@@ -2,7 +2,7 @@
 #include "AtlBase.h"
 #include "LogonServerDlg.h"
 #include "TraceCatch.h"
-
+///#include "InitParamter.h"
 //////////////////////////////////////////////////////////////////////////
 
 BEGIN_MESSAGE_MAP(CSystemOptionDlg, CDialog)
@@ -49,38 +49,39 @@ BOOL CSystemOptionDlg::OnInitDialog()
 	((CEdit *)GetDlgItem(IDC_USER_DATABASE_NAME))->LimitText(31);
 
 	//加载参数
-	CInitParamter InitParamter;
-	InitParamter.LoadInitParamter();
+	CServerParameter InitParamter;
+	InitParamter.LoadServerParameter();
 
 	//设置控件
-	SetDlgItemInt(IDC_LISTEN_PORT,InitParamter.m_wListenPort,FALSE);
+	SetDlgItemInt(IDC_LISTEN_PORT,InitParamter.m_wServicePort,FALSE);
 	SetDlgItemInt(IDC_MAX_CONNECT,InitParamter.m_wMaxConnect,FALSE);
 
 	//登录数据库
-	SetDlgItemInt(IDC_USER_DATABASE_PORT,InitParamter.m_wUserDataBasePort,FALSE);
-	SetDlgItemText(IDC_USER_DATABASE_USER,InitParamter.m_szUserDataBaseUser);
-	SetDlgItemText(IDC_USER_DATABASE_PASS,InitParamter.m_szUserDataBasePass);
-	SetDlgItemText(IDC_USER_DATABASE_NAME,InitParamter.m_szUserDataBaseName);
+    CServerParameter::tagDataBaseParameter * p3=&InitParamter.m_AccountsDBParameter;
+	SetDlgItemInt(IDC_USER_DATABASE_PORT,p3->wDataBasePort,FALSE);
+	SetDlgItemText(IDC_USER_DATABASE_USER,p3->szDataBaseUser);
+	SetDlgItemText(IDC_USER_DATABASE_PASS,p3->szDataBasePass);
+	SetDlgItemText(IDC_USER_DATABASE_NAME,p3->szDataBaseName);
 
 	//登录数据库地址
-	DWORD dwDataBaseIP=inet_addr(InitParamter.m_szUserDataBaseAddr);
+	DWORD dwDataBaseIP=inet_addr(p3->szDataBaseAddr);
 	if (dwDataBaseIP==INADDR_NONE)
 	{
-		LPHOSTENT lpHost=gethostbyname(InitParamter.m_szUserDataBaseAddr);
+		LPHOSTENT lpHost=gethostbyname(p3->szDataBaseAddr);
 		if (lpHost!=NULL) dwDataBaseIP=((LPIN_ADDR)lpHost->h_addr)->s_addr;
 	}
 	CIPAddressCtrl * pDataBaseIP=(CIPAddressCtrl *)GetDlgItem(IDC_USER_DATABASE_IP);
 	pDataBaseIP->SetAddress(ntohl(dwDataBaseIP));
 
 	//主站地址
-	if (InitParamter.m_szMainPage[0]==0) SetDlgItemText(IDC_MAIN_PAGE,szStationPage);
-	else SetDlgItemText(IDC_MAIN_PAGE,InitParamter.m_szMainPage);
+	if (InitParamter.m_ServiceAddress.szAddress[0]==0) SetDlgItemText(IDC_MAIN_PAGE,szStationPage);
+	else SetDlgItemText(IDC_MAIN_PAGE,InitParamter.m_ServiceAddress.szAddress);
 
 	//中心服务器
-	dwDataBaseIP=inet_addr(InitParamter.m_szCenterServerAddr);
+	dwDataBaseIP=inet_addr(InitParamter.m_CorrespondAddress.szAddress);
 	if (dwDataBaseIP==INADDR_NONE)
 	{
-		LPHOSTENT lpHost=gethostbyname(InitParamter.m_szCenterServerAddr);
+		LPHOSTENT lpHost=gethostbyname(InitParamter.m_CorrespondAddress.szAddress);
 		if (lpHost!=NULL) dwDataBaseIP=((LPIN_ADDR)lpHost->h_addr)->s_addr;
 	}
 	pDataBaseIP=(CIPAddressCtrl *)GetDlgItem(IDC_CENTER_SERVER_IP);
@@ -94,6 +95,7 @@ BOOL CSystemOptionDlg::OnInitDialog()
 //确定函数
 void CSystemOptionDlg::OnOK()
 {
+#if 0
 	__ENTER_FUNCTION
 
 	//获取输入
@@ -155,7 +157,7 @@ void CSystemOptionDlg::OnOK()
 	InitParamter.SaveInitParamter(false);
 
 	__LEAVE_FUNCTION
-
+#endif
 	__super::OnOK();
 }
 

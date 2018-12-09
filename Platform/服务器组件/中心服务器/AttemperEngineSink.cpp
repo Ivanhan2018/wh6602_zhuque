@@ -45,12 +45,7 @@ bool __cdecl CAttemperEngineSink::OnAttemperEngineStart(IUnknownEx * pIUnknownEx
 	}
 
 	//加载列表
-	tagDataBaseInfo DataBaseInfo;
-	DataBaseInfo.wDataBasePort=m_pInitParamter->m_wServerDataBasePort;
-	DataBaseInfo.dwDataBaseAddr=inet_addr(m_pInitParamter->m_szServerDataBaseAddr);
-	lstrcpyn(DataBaseInfo.szDataBaseUser,m_pInitParamter->m_szServerDataBaseUser,CountArray(DataBaseInfo.szDataBaseUser));
-	lstrcpyn(DataBaseInfo.szDataBasePass,m_pInitParamter->m_szServerDataBasePass,CountArray(DataBaseInfo.szDataBasePass));
-	lstrcpyn(DataBaseInfo.szDataBaseName,m_pInitParamter->m_szServerDataBaseName,CountArray(DataBaseInfo.szDataBaseName));
+	tagDataBaseInfo DataBaseInfo=CServerParameter::wh6603_to_2(&m_pInitParamter->m_PlatformDBParameter);
 	if (m_ServerListCenter->LoadServerList(DataBaseInfo)==false) 
 	{
 		CTraceService::TraceString(TEXT("游戏列表加载失败"),TraceLevel_Exception);

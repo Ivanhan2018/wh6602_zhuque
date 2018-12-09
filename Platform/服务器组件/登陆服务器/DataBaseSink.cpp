@@ -14,7 +14,8 @@ extern CLogonServerApp theApp;
 CDataBaseSink::CDataBaseSink()
 {
 	//设置变量
-	m_pInitParamter=NULL;
+	//m_pInitParamter=NULL;
+	m_pInitParamter1=NULL;
 	m_pIDataBaseEngineEvent=NULL;
 
 	return;
@@ -46,8 +47,8 @@ bool __cdecl CDataBaseSink::OnDataBaseEngineStart(IUnknownEx * pIUnknownEx)
 	try
 	{
 		//连接用户数据库
-		m_AccountsDBModule->SetConnectionInfo(m_pInitParamter->m_szUserDataBaseAddr,m_pInitParamter->m_wUserDataBasePort,
-		m_pInitParamter->m_szUserDataBaseName,m_pInitParamter->m_szUserDataBaseUser,m_pInitParamter->m_szUserDataBasePass);
+	    CServerParameter::tagDataBaseParameter * p=&m_pInitParamter1->m_AccountsDBParameter;		
+		m_AccountsDBModule->SetConnectionInfo(p->szDataBaseAddr,p->wDataBasePort,p->szDataBaseName,p->szDataBaseUser,p->szDataBasePass);
 		m_AccountsDBModule->OpenConnection();
 
 		//发起连接
@@ -84,7 +85,7 @@ bool __cdecl CDataBaseSink::OnDataBaseEngineStop(IUnknownEx * pIUnknownEx)
 	}
 
 	//组件变量
-	m_pInitParamter=NULL;
+	m_pInitParamter1=NULL;
 	m_pIDataBaseEngineEvent=NULL;
 
 	__LEAVE_FUNCTION

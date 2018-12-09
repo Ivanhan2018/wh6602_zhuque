@@ -23,7 +23,7 @@ class CCenterService
 {
 	//配置变量
 protected:
-	CInitParamter					m_InitParamter;						//配置参数
+	CServerParameter				m_InitParamter;						//配置参数
 	enServiceStatus					m_ServiceStatus;					//运行状态
 
 	//组件变量

@@ -1,7 +1,7 @@
 #include "Stdafx.h"
 #include "ServiceLoader.h"
 #include "ServiceLoaderDlg.h"
-
+//#include "InitParamter.h"
 //////////////////////////////////////////////////////////////////////////
 
 BEGIN_MESSAGE_MAP(CSystemOptionDlg, CDialog)
@@ -52,46 +52,48 @@ BOOL CSystemOptionDlg::OnInitDialog()
 	((CEdit *)GetDlgItem(IDC_SERVER_DATABASE_NAME))->LimitText(31);
 
 	//加载参数
-	CInitParamter InitParamter;
-	InitParamter.LoadInitParamter();
+	CServerParameter InitParamter;
+	InitParamter.LoadServerParameter();
 
 	//登录数据库
-	SetDlgItemInt(IDC_USER_DATABASE_PORT,InitParamter.m_wGameUserDBPort,FALSE);
-	SetDlgItemText(IDC_USER_DATABASE_USER,InitParamter.m_szGameUserDBUser);
-	SetDlgItemText(IDC_USER_DATABASE_PASS,InitParamter.m_szGameUserDBPass);
-	SetDlgItemText(IDC_USER_DATABASE_NAME,InitParamter.m_szGameUserDBName);
+    CServerParameter::tagDataBaseParameter * p3=&InitParamter.m_AccountsDBParameter;
+	SetDlgItemInt(IDC_USER_DATABASE_PORT,p3->wDataBasePort,FALSE);
+	SetDlgItemText(IDC_USER_DATABASE_USER,p3->szDataBaseUser);
+	SetDlgItemText(IDC_USER_DATABASE_PASS,p3->szDataBasePass);
+	SetDlgItemText(IDC_USER_DATABASE_NAME,p3->szDataBaseName);
 
 	//信息数据库
-	SetDlgItemInt(IDC_SERVER_DATABASE_PORT,InitParamter.m_wServerInfoDBPort,FALSE);
-	SetDlgItemText(IDC_SERVER_DATABASE_USER,InitParamter.m_szServerInfoDBUser);
-	SetDlgItemText(IDC_SERVER_DATABASE_PASS,InitParamter.m_szServerInfoDBPass);
-	SetDlgItemText(IDC_SERVER_DATABASE_NAME,InitParamter.m_szServerInfoDBName);
+    CServerParameter::tagDataBaseParameter * p1=&InitParamter.m_PlatformDBParameter;
+	SetDlgItemInt(IDC_SERVER_DATABASE_PORT,p1->wDataBasePort,FALSE);
+	SetDlgItemText(IDC_SERVER_DATABASE_USER,p1->szDataBaseUser);
+	SetDlgItemText(IDC_SERVER_DATABASE_PASS,p1->szDataBasePass);
+	SetDlgItemText(IDC_SERVER_DATABASE_NAME,p1->szDataBaseName);
 
 	//登录数据库地址
-	DWORD dwDataBaseIP=inet_addr(InitParamter.m_szGameUserDBAddr);
+	DWORD dwDataBaseIP=inet_addr(p3->szDataBaseAddr);
 	if (dwDataBaseIP==INADDR_NONE)
 	{
-		LPHOSTENT lpHost=gethostbyname(InitParamter.m_szGameUserDBAddr);
+		LPHOSTENT lpHost=gethostbyname(p3->szDataBaseAddr);
 		if (lpHost!=NULL) dwDataBaseIP=((LPIN_ADDR)lpHost->h_addr)->s_addr;
 	}
 	CIPAddressCtrl * pDataBaseIP=(CIPAddressCtrl *)GetDlgItem(IDC_USER_DATABASE_IP);
 	pDataBaseIP->SetAddress(ntohl(dwDataBaseIP));
 
 	//信息数据库地址
-	dwDataBaseIP=inet_addr(InitParamter.m_szServerInfoDBAddr);
+	dwDataBaseIP=inet_addr(p1->szDataBaseAddr);
 	if (dwDataBaseIP==INADDR_NONE)
 	{
-		LPHOSTENT lpHost=gethostbyname(InitParamter.m_szServerInfoDBAddr);
+		LPHOSTENT lpHost=gethostbyname(p1->szDataBaseAddr);
 		if (lpHost!=NULL) dwDataBaseIP=((LPIN_ADDR)lpHost->h_addr)->s_addr;
 	}
 	pDataBaseIP=(CIPAddressCtrl *)GetDlgItem(IDC_SERVER_DATABASE_IP);
 	pDataBaseIP->SetAddress(ntohl(dwDataBaseIP));
 
 	//中心服务器
-	dwDataBaseIP=inet_addr(InitParamter.m_szCenterServerAddr);
+	dwDataBaseIP=inet_addr(InitParamter.m_CorrespondAddress.szAddress);
 	if (dwDataBaseIP==INADDR_NONE)
 	{
-		LPHOSTENT lpHost=gethostbyname(InitParamter.m_szCenterServerAddr);
+		LPHOSTENT lpHost=gethostbyname(InitParamter.m_CorrespondAddress.szAddress);
 		if (lpHost!=NULL) dwDataBaseIP=((LPIN_ADDR)lpHost->h_addr)->s_addr;
 	}
 	pDataBaseIP=(CIPAddressCtrl *)GetDlgItem(IDC_CENTER_SERVER_IP);
@@ -103,6 +105,7 @@ BOOL CSystemOptionDlg::OnInitDialog()
 //确定函数
 void CSystemOptionDlg::OnOK()
 {
+#if 0
 	//获取输入
 	CInitParamter InitParamter;
 
@@ -141,6 +144,7 @@ void CSystemOptionDlg::OnOK()
 
 	//保存设置
 	InitParamter.SaveInitParamter(false);
+#endif
 
 	__super::OnOK();
 }
@@ -175,7 +179,7 @@ BOOL CServiceLoaderDlg::OnInitDialog()
 	SetIcon(hIcon,FALSE);
 
 	//加载参数
-	m_InitParamter.LoadInitParamter();
+	m_InitParamter.LoadServerParameter();
 
 	//加载配置
 	LPCTSTR pszCmdLine=AfxGetApp()->m_lpCmdLine;
@@ -247,7 +251,7 @@ void CServiceLoaderDlg::OnBnClickedStart()
 	if (m_ServiceParameter.IsLoaded()==false) return;
 
 	//加载参数
-	m_InitParamter.LoadInitParamter();
+	m_InitParamter.LoadServerParameter();
 
 	//变量定义
 	tagGameServiceParameter GameServiceParameter;
@@ -266,22 +270,14 @@ void CServiceLoaderDlg::OnBnClickedStart()
 
 	//构造参数
 	GameServiceParameter.GameServiceOption=OptionParameter.GameServiceOption;
-	GameServiceParameter.dwCenterAddr=inet_addr(m_InitParamter.m_szCenterServerAddr);
+	GameServiceParameter.dwCenterAddr=inet_addr(m_InitParamter.m_CorrespondAddress.szAddress);
 	lstrcpyn(GameServiceParameter.szModule,OptionParameter.szModuleName,CountArray(GameServiceParameter.szModule));
 
 	//用户数据库
-	GameServiceParameter.GameUserDBInfo.wDataBasePort=m_InitParamter.m_wGameUserDBPort;
-	GameServiceParameter.GameUserDBInfo.dwDataBaseAddr=inet_addr(m_InitParamter.m_szGameUserDBAddr);
-	lstrcpyn(GameServiceParameter.GameUserDBInfo.szDataBaseUser,m_InitParamter.m_szGameUserDBUser,CountArray(GameServiceParameter.GameUserDBInfo.szDataBaseUser));
-	lstrcpyn(GameServiceParameter.GameUserDBInfo.szDataBasePass,m_InitParamter.m_szGameUserDBPass,CountArray(GameServiceParameter.GameUserDBInfo.szDataBasePass));
-	lstrcpyn(GameServiceParameter.GameUserDBInfo.szDataBaseName,m_InitParamter.m_szGameUserDBName,CountArray(GameServiceParameter.GameUserDBInfo.szDataBaseName));
+	GameServiceParameter.GameUserDBInfo=CServerParameter::wh6603_to_2(&m_InitParamter.m_AccountsDBParameter);
 
 	//游戏数据库
-	GameServiceParameter.GameScoreDBInfo.dwDataBaseAddr=dwDataBaseAddr;
-	GameServiceParameter.GameScoreDBInfo.wDataBasePort=pDBConnectInfo->wDataBasePort;
-	lstrcpyn(GameServiceParameter.GameScoreDBInfo.szDataBaseUser,pDBConnectInfo->szDataBaseUser,CountArray(GameServiceParameter.GameScoreDBInfo.szDataBaseUser));
-	lstrcpyn(GameServiceParameter.GameScoreDBInfo.szDataBasePass,pDBConnectInfo->szDataBasePass,CountArray(GameServiceParameter.GameScoreDBInfo.szDataBasePass));
-	lstrcpyn(GameServiceParameter.GameScoreDBInfo.szDataBaseName,OptionParameter.szDataBaseName,CountArray(GameServiceParameter.GameScoreDBInfo.szDataBaseName));
+	GameServiceParameter.GameScoreDBInfo=CServerParameter::wh6603_to_2(&m_InitParamter.m_TreasureDBParameter);
 
 	//创建服务
 	if ((m_GameService.GetInterface()==NULL)&&(m_GameService.CreateInstance()==false))
@@ -460,8 +456,8 @@ const tagDBConnectInfo * CServiceLoaderDlg::GetDBConnectInfo(DWORD dwDataBaseAdd
 	try
 	{
 		//连接数据库
-		ServerInfoDB->SetConnectionInfo(m_InitParamter.m_szServerInfoDBAddr,m_InitParamter.m_wServerInfoDBPort,
-			m_InitParamter.m_szServerInfoDBName,m_InitParamter.m_szServerInfoDBUser,m_InitParamter.m_szServerInfoDBPass);
+	    CServerParameter::tagDataBaseParameter * p=&m_InitParamter.m_PlatformDBParameter;		
+		ServerInfoDB->SetConnectionInfo(p->szDataBaseAddr,p->wDataBasePort,p->szDataBaseName,p->szDataBaseUser,p->szDataBasePass);
 
 		//打开连接
 		ServerInfoDB->OpenConnection();

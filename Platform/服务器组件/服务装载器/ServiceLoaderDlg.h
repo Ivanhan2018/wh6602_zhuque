@@ -5,7 +5,7 @@
 
 #include "Stdafx.h"
 #include "Resource.h"
-#include "InitParamter.h"
+#include "ServerParameter.h"//系统配置
 #include "ServiceParameter.h"
 
 //////////////////////////////////////////////////////////////////////////
@@ -59,7 +59,7 @@ public:
 	//控件变量
 public:
 	CRichEditTrace					m_RichEditCtrl;						//信息窗口
-	CInitParamter					m_InitParamter;						//配置参数
+	CServerParameter				m_InitParamter;						//配置参数
 	CServiceParameter				m_ServiceParameter;					//服务参数
 	CDBConnectInfoArray				m_DBConnectInfoArray;				//信息数组
 

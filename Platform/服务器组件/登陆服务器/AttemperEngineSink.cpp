@@ -31,7 +31,8 @@ extern CLogonServerApp theApp;
 CAttemperEngineSink::CAttemperEngineSink()
 {
 	//设置变量
-	m_pInitParamter=NULL;
+	//m_pInitParamter=NULL;
+	m_pInitParamter1=NULL;
 	m_pBindParameter=NULL;
 
 	//设置变量
@@ -76,18 +77,15 @@ bool __cdecl CAttemperEngineSink::OnAttemperEngineStart(IUnknownEx * pIUnknownEx
 	m_ServerList.SetSocketEngine(m_pITCPNetworkEngine);
 
 	//绑定参数
-	m_pBindParameter=new tagBindParameter[m_pInitParamter->m_wMaxConnect];
-	ZeroMemory(m_pBindParameter,sizeof(tagBindParameter)*m_pInitParamter->m_wMaxConnect);
+	m_pBindParameter=new tagBindParameter[m_pInitParamter1->m_wMaxConnect];
+	ZeroMemory(m_pBindParameter,sizeof(tagBindParameter)*m_pInitParamter1->m_wMaxConnect);
 
-	//中心连接
-	DWORD dwServerIP=inet_addr(m_pInitParamter->m_szCenterServerAddr);
-
-#if 1
-	// dwServerIP 值是反的，网狐为何固意要用一个反值呢
-	m_pITCPSocketCorrespond->Connect(ntohl(dwServerIP),PORT_CENTER_SERVER);
-#else
-	m_pITCPSocketCorrespond->Connect(m_pInitParamter->m_szCenterServerAddr,PORT_CENTER_SERVER);
-#endif
+	//连接中心服
+	DWORD dwServerIP=inet_addr(m_pInitParamter1->m_CorrespondAddress.szAddress);
+	//dwServerIP 值是反的
+	m_pITCPSocketCorrespond->Connect(ntohl(dwServerIP),m_pInitParamter1->m_wCorrespondPort);
+	//不能用下面这句
+	//m_pITCPSocketCorrespond->Connect(m_pInitParamter->m_szCenterServerAddr,PORT_CENTER_SERVER);
 
 	//初始数据
 	//m_DownloadFaceInfoMap.InitHashTable(503);
@@ -128,16 +126,12 @@ bool __cdecl CAttemperEngineSink::OnEventTimer(DWORD dwTimerID, WPARAM wBindPara
 	{
 	case IDI_CONNECT_CENTER_SERVER:		//连接中心服务器
 		{
-			//发起连接
-			DWORD dwServerIP=inet_addr(m_pInitParamter->m_szCenterServerAddr);
-
-			// add by HouGuoJiang 2011-11-25
-			#if 1
-				// dwServerIP 值是反的，网狐为何固意要用一个反值呢
-				m_pITCPSocketCorrespond->Connect(ntohl(dwServerIP),PORT_CENTER_SERVER);
-			#else
-				m_pITCPSocketCorrespond->Connect(m_pInitParamter->m_szCenterServerAddr,PORT_CENTER_SERVER);
-			#endif
+			//连接中心服
+			DWORD dwServerIP=inet_addr(m_pInitParamter1->m_CorrespondAddress.szAddress);
+			//dwServerIP 值是反的
+			m_pITCPSocketCorrespond->Connect(ntohl(dwServerIP),m_pInitParamter1->m_wCorrespondPort);
+			//不能用下面这句
+			//m_pITCPSocketCorrespond->Connect(m_pInitParamter->m_szCenterServerAddr,PORT_CENTER_SERVER);
 
 			//错误提示
 			CTraceService::TraceString(TEXT("正在尝试重新连接中心服务器...."),TraceLevel_Normal);
@@ -232,7 +226,7 @@ bool CAttemperEngineSink::OnDBLogonSuccess(DWORD dwContextID, VOID * pData, WORD
 	if (wDataSize!=sizeof(DBR_GP_LogonSuccess)) return false;
 
 	//判断在线
-	ASSERT(LOWORD(dwContextID)<m_pInitParamter->m_wMaxConnect);
+	ASSERT(LOWORD(dwContextID)<m_pInitParamter1->m_wMaxConnect);
 	if ((m_pBindParameter+LOWORD(dwContextID))->dwSocketID!=dwContextID) return true;
 
 	//变量定义
@@ -311,9 +305,9 @@ bool CAttemperEngineSink::OnDBLogonSuccess(DWORD dwContextID, VOID * pData, WORD
 	}
 
 	//站点主页
-	if (m_pInitParamter->m_szMainPage[0]!=0)
+	if (m_pInitParamter1->m_ServiceAddress.szAddress[0]!=0)
 	{
-		SendPacket.AddPacket(m_pInitParamter->m_szMainPage,CountStringBuffer(m_pInitParamter->m_szMainPage),DTP_STATION_PAGE);
+		SendPacket.AddPacket(m_pInitParamter1->m_ServiceAddress.szAddress,CountStringBuffer(m_pInitParamter1->m_ServiceAddress.szAddress),DTP_STATION_PAGE);
 	}
 
 	//发送登录结果
@@ -395,7 +389,7 @@ bool CAttemperEngineSink::OnDBLogonError(DWORD dwContextID, VOID * pData, WORD w
 	if (wDataSize!=sizeof(DBR_GP_LogonError)) return false;
 
 	//判断在线
-	ASSERT(LOWORD(dwContextID)<m_pInitParamter->m_wMaxConnect);
+	ASSERT(LOWORD(dwContextID)<m_pInitParamter1->m_wMaxConnect);
 	if ((m_pBindParameter+LOWORD(dwContextID))->dwSocketID!=dwContextID) return true;
 
 	//变量定义
@@ -664,8 +658,8 @@ bool __cdecl CAttemperEngineSink::OnEventTCPNetworkBind(DWORD dwClientIP, DWORD 
 	__ENTER_FUNCTION
 
 	//获取索引
-	ASSERT(LOWORD(dwSocketID)<m_pInitParamter->m_wMaxConnect);
-	if (LOWORD(dwSocketID)>=m_pInitParamter->m_wMaxConnect) return false;
+	ASSERT(LOWORD(dwSocketID)<m_pInitParamter1->m_wMaxConnect);
+	if (LOWORD(dwSocketID)>=m_pInitParamter1->m_wMaxConnect) return false;
 
 	//变量定义
 	WORD wBindIndex=LOWORD(dwSocketID);
@@ -747,7 +741,7 @@ bool CAttemperEngineSink::OnSocketMainLogon(WORD wSubCmdID, VOID * pData, WORD w
 			CTraceService::TraceString(info, TraceLevel_Normal);*/
 
 			//连接信息
-			ASSERT(LOWORD(dwSocketID)<m_pInitParamter->m_wMaxConnect);
+			ASSERT(LOWORD(dwSocketID)<m_pInitParamter1->m_wMaxConnect);
 			DWORD dwClientAddr=(m_pBindParameter+LOWORD(dwSocketID))->dwClientIP;
 
 			////效验版本
@@ -977,7 +971,7 @@ bool CAttemperEngineSink::OnSocketMainUser(WORD wSubCmdID, VOID * pData, WORD wD
 			DBR_GP_GiftGold   giftMoney;
 			memcpy(&giftMoney, pData, sizeof(giftMoney));
 			//连接信息
-			ASSERT(LOWORD(dwSocketID)<m_pInitParamter->m_wMaxConnect);
+			ASSERT(LOWORD(dwSocketID)<m_pInitParamter1->m_wMaxConnect);
 			DWORD dwClientAddr=(m_pBindParameter+LOWORD(dwSocketID))->dwClientIP;
 			giftMoney.dwClientIP=dwClientAddr;
 			//投递数据库
@@ -996,7 +990,7 @@ bool CAttemperEngineSink::OnSocketMainUser(WORD wSubCmdID, VOID * pData, WORD wD
 			CMD_GP_CheckLine checkline;
 			memcpy(&checkline, pCheckLineData, sizeof(checkline));
 			//连接信息
-			ASSERT(LOWORD(dwSocketID)<m_pInitParamter->m_wMaxConnect);
+			ASSERT(LOWORD(dwSocketID)<m_pInitParamter1->m_wMaxConnect);
 			checkline.dwClientIP = (m_pBindParameter+LOWORD(dwSocketID))->dwClientIP;
 			//发送数据
 			m_pITCPNetworkEngine->SendData(dwSocketID, MDM_GP_USER, SUB_GP_CHECK_LINE, &checkline, sizeof(checkline));

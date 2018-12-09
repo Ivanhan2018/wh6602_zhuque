@@ -6,7 +6,8 @@
 #include "Stdafx.h"
 #include "Commonality.h"
 #include "ServerList.h"
-#include "InitParamter.h"
+//#include "InitParamter.h"
+#include "ServerParameter.h"
 #include <map>
 #include <string>
 
@@ -76,7 +77,8 @@ class CAttemperEngineSink : public IAttemperEngineSink
 
 	//变量定义
 protected:
-	CInitParamter *					m_pInitParamter;					//配置参数
+	//CInitParamter *					m_pInitParamter;					//配置参数
+	CServerParameter *              m_pInitParamter1;
 	tagBindParameter *				m_pBindParameter;					//连接信息
 
 	//辅助组件

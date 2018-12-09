@@ -3,7 +3,7 @@
 #include "Stdafx.h"
 #include "Resource.h"
 #include "CenterService.h"
-
+///#include "InitParamter.h"
 //////////////////////////////////////////////////////////////////////////
 
 //配置对话框
@@ -25,7 +25,7 @@ protected:
 	//功能函数
 public:
 	//配置参数
-	void SetInitParamter(const CInitParamter & InitParamter);
+	//void SetInitParamter(const CInitParamter & InitParamter);
 
 	//消息映射
 	DECLARE_MESSAGE_MAP()

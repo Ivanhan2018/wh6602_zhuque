@@ -45,24 +45,25 @@ BOOL CSystemOptionDlg::OnInitDialog()
 	((CEdit *)GetDlgItem(IDC_SERVER_DATABASE_NAME))->LimitText(31);
 
 	//加载参数
-	CInitParamter InitParamter;
-	InitParamter.LoadInitParamter();
+	CServerParameter InitParamter;
+	InitParamter.LoadServerParameter();
 
 	//设置控件
-	SetDlgItemInt(IDC_LISTEN_PORT,InitParamter.m_wListenPort,FALSE);
+	SetDlgItemInt(IDC_LISTEN_PORT,InitParamter.m_wCorrespondPort,FALSE);
 	SetDlgItemInt(IDC_MAX_CONNECT,InitParamter.m_wMaxConnect,FALSE);
 
 	//信息数据库
-	SetDlgItemInt(IDC_SERVER_DATABASE_PORT,InitParamter.m_wServerDataBasePort,FALSE);
-	SetDlgItemText(IDC_SERVER_DATABASE_USER,InitParamter.m_szServerDataBaseUser);
-	SetDlgItemText(IDC_SERVER_DATABASE_PASS,InitParamter.m_szServerDataBasePass);
-	SetDlgItemText(IDC_SERVER_DATABASE_NAME,InitParamter.m_szServerDataBaseName);
+    CServerParameter::tagDataBaseParameter * p1=&InitParamter.m_PlatformDBParameter;
+	SetDlgItemInt(IDC_SERVER_DATABASE_PORT,p1->wDataBasePort,FALSE);
+	SetDlgItemText(IDC_SERVER_DATABASE_USER,p1->szDataBaseUser);
+	SetDlgItemText(IDC_SERVER_DATABASE_PASS,p1->szDataBasePass);
+	SetDlgItemText(IDC_SERVER_DATABASE_NAME,p1->szDataBaseName);
 
 	//信息数据库地址
-	DWORD dwDataBaseIP=inet_addr(InitParamter.m_szServerDataBaseAddr);
+	DWORD dwDataBaseIP=inet_addr(p1->szDataBaseAddr);
 	if (dwDataBaseIP==INADDR_NONE)
 	{
-		LPHOSTENT lpHost=gethostbyname(InitParamter.m_szServerDataBaseAddr);
+		LPHOSTENT lpHost=gethostbyname(p1->szDataBaseAddr);
 		if (lpHost!=NULL) dwDataBaseIP=((LPIN_ADDR)lpHost->h_addr)->s_addr;
 	}
 	CIPAddressCtrl * pDataBaseIP=(CIPAddressCtrl *)GetDlgItem(IDC_SERVER_DATABASE_IP);
@@ -74,6 +75,7 @@ BOOL CSystemOptionDlg::OnInitDialog()
 //确定函数
 void CSystemOptionDlg::OnOK()
 {
+#if 0
 	//获取输入
 	CInitParamter InitParamter;
 	InitParamter.m_wListenPort=GetDlgItemInt(IDC_LISTEN_PORT);
@@ -94,7 +96,7 @@ void CSystemOptionDlg::OnOK()
 
 	//保存设置
 	InitParamter.SaveInitParamter(false);
-
+#endif
 	__super::OnOK();
 }
 

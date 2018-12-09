@@ -42,6 +42,15 @@
     <ClCompile Include="..\..\common\TraceCatch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ServerParameter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WHEncrypt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WHIniData.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AttemperEngineSink.h">
@@ -78,6 +87,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Zip.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerParameter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WHEncrypt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WHIniData.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -104,7 +104,7 @@
     <Link>
       <AdditionalDependencies>../../链接库/ComService.lib;../../链接库/KernelEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>../../运行/ServRelease/CenterServer.exe</OutputFile>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -131,10 +131,13 @@
     <ClCompile Include="CenterService.cpp" />
     <ClCompile Include="DataBaseSink.cpp" />
     <ClCompile Include="InitParamter.cpp" />
+    <ClCompile Include="ServerParameter.cpp" />
     <ClCompile Include="Stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="WHEncrypt.cpp" />
+    <ClCompile Include="WHIniData.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AttemperEngineSink.h" />
@@ -145,7 +148,10 @@
     <ClInclude Include="DataBaseSink.h" />
     <ClInclude Include="InitParamter.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="ServerParameter.h" />
     <ClInclude Include="Stdafx.h" />
+    <ClInclude Include="WHEncrypt.h" />
+    <ClInclude Include="WHIniData.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\CenterServer.ico" />

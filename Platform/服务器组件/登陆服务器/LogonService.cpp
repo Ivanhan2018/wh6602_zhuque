@@ -26,7 +26,8 @@ bool CLogonService::StartService()
 	StopService();
 
 	//加载参数
-	m_InitParamter.LoadInitParamter();
+	//m_InitParamter.LoadInitParamter();
+	m_InitParamter1.LoadServerParameter();
 
 	//创建组件
 	if ((m_TimerEngine.GetInterface()==NULL)&&(m_TimerEngine.CreateInstance()==false)) return false;
@@ -54,19 +55,21 @@ bool CLogonService::StartService()
 	if (m_TCPNetworkEngine->SetTCPNetworkEngineEvent(pIAttemperEngine)==false) return false;
 
 	//调度回调
-	m_AttemperEngineSink.m_pInitParamter=&m_InitParamter;
+	//m_AttemperEngineSink.m_pInitParamter=&m_InitParamter;
+	m_AttemperEngineSink.m_pInitParamter1=&m_InitParamter1;
 	m_AttemperEngineSink.m_pITimerEngine=m_TimerEngine.GetInterface();
 	m_AttemperEngineSink.m_pIDataBaseEngine=m_DataBaseEngine.GetInterface();
 	m_AttemperEngineSink.m_pITCPNetworkEngine=m_TCPNetworkEngine.GetInterface();
 	m_AttemperEngineSink.m_pITCPSocketCorrespond=m_TCPSocketCorrespond.GetInterface();
 
 	//数据库回调
-	m_DataBaseEngineSink.m_pInitParamter=&m_InitParamter;
+	//m_DataBaseEngineSink.m_pInitParamter=&m_InitParamter;
+	m_DataBaseEngineSink.m_pInitParamter1=&m_InitParamter1;
 	m_DataBaseEngineSink.m_pIDataBaseEngineEvent=QUERY_OBJECT_PTR_INTERFACE(pIAttemperEngine,IDataBaseEngineEvent);
 
 	//配置网络
-	WORD wMaxConnect=m_InitParamter.m_wMaxConnect;
-	WORD wServicePort=m_InitParamter.m_wListenPort;
+	WORD wMaxConnect=m_InitParamter1.m_wMaxConnect;
+	WORD wServicePort=m_InitParamter1.m_wServicePort;
 	if (m_TCPNetworkEngine->SetServiceParameter(wServicePort,wMaxConnect)==false) return false;
 
 	//时间引擎

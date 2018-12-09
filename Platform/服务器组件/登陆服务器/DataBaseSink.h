@@ -5,8 +5,8 @@
 
 #include "Afxinet.h"
 #include "Commonality.h"
-#include "InitParamter.h"
-
+//#include "InitParamter.h"
+#include "ServerParameter.h"
 //////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
@@ -21,7 +21,8 @@ class CDataBaseSink : public IDataBaseEngineSink
 
 	//变量定义
 protected:
-	CInitParamter *					m_pInitParamter;					//配置参数
+	//CInitParamter *					m_pInitParamter;					//配置参数
+	CServerParameter *              m_pInitParamter1;
 	IDataBaseEngineEvent *			m_pIDataBaseEngineEvent;			//数据事件
 
 	//组件变量

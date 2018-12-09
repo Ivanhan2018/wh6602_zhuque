@@ -32,7 +32,7 @@ bool CCenterService::StartService()
 	StopService();
 
 	//加载参数
-	m_InitParamter.LoadInitParamter();
+	m_InitParamter.LoadServerParameter();
 
 	//创建组件
 	if ((m_DataBaseEngine.GetInterface()==NULL)&&(m_DataBaseEngine.CreateInstance()==false)) return false;
@@ -66,7 +66,7 @@ bool CCenterService::StartService()
 
 	//配置网络
 	WORD wMaxConnect=m_InitParamter.m_wMaxConnect;
-	WORD wServicePort=m_InitParamter.m_wListenPort;
+	WORD wServicePort=m_InitParamter.m_wCorrespondPort;
 	if (m_TCPNetworkEngine->SetServiceParameter(wServicePort,wMaxConnect)==false) return false;
 
 	//调度引擎
