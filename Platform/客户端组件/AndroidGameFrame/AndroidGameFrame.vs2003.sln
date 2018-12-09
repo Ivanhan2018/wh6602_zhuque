@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AndroidGameFrame", "AndroidGameFrame.vcproj", "{87E86921-6DD1-443B-861F-85971C3C8981}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1D15D4A3-E19A-413F-9E34-38E90163C5C0} = {1D15D4A3-E19A-413F-9E34-38E90163C5C0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AndroidLoad", "..\AndroidLoad\FlashEnter.vcproj", "{AD727440-C9E8-4399-A306-C016E39683DA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1D15D4A3-E19A-413F-9E34-38E90163C5C0} = {1D15D4A3-E19A-413F-9E34-38E90163C5C0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AndroidUserInfo", "..\AndroidUserInfo\AndroidUserInfo.vcproj", "{1D15D4A3-E19A-413F-9E34-38E90163C5C0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{87E86921-6DD1-443B-861F-85971C3C8981}.Debug.ActiveCfg = Debug|Win32
+		{87E86921-6DD1-443B-861F-85971C3C8981}.Debug.Build.0 = Debug|Win32
+		{87E86921-6DD1-443B-861F-85971C3C8981}.Release.ActiveCfg = Release|Win32
+		{87E86921-6DD1-443B-861F-85971C3C8981}.Release.Build.0 = Release|Win32
+		{AD727440-C9E8-4399-A306-C016E39683DA}.Debug.ActiveCfg = Debug|Win32
+		{AD727440-C9E8-4399-A306-C016E39683DA}.Debug.Build.0 = Debug|Win32
+		{AD727440-C9E8-4399-A306-C016E39683DA}.Release.ActiveCfg = Release|Win32
+		{AD727440-C9E8-4399-A306-C016E39683DA}.Release.Build.0 = Release|Win32
+		{1D15D4A3-E19A-413F-9E34-38E90163C5C0}.Debug.ActiveCfg = Debug|Win32
+		{1D15D4A3-E19A-413F-9E34-38E90163C5C0}.Debug.Build.0 = Debug|Win32
+		{1D15D4A3-E19A-413F-9E34-38E90163C5C0}.Release.ActiveCfg = Release|Win32
+		{1D15D4A3-E19A-413F-9E34-38E90163C5C0}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
