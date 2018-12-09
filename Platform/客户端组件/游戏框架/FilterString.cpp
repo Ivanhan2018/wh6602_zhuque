@@ -14,6 +14,7 @@ CFilterString::~CFilterString(void)
 //初始化数据
 void CFilterString::InitFilterData()
 {
+	return;//by hxh
 	char buf[1024]={0};                //临时保存读取出来的文件内容
 	CString message="";
 	ifstream infile;

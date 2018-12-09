@@ -110,7 +110,7 @@
       <AdditionalDependencies>../../链接库/ComService.lib;../../链接库/ClientShare.lib;../../链接库/SkinControls.lib;Winmm.lib;skinsb.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>../../运行/ClientRelease/GameFrame.dll</OutputFile>
       <ModuleDefinitionFile>.\GameFrame.def</ModuleDefinitionFile>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

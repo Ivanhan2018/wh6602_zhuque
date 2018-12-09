@@ -114,7 +114,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>..\..\共享组件\界面控件\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GAME_FRAME_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GAME_FRAME_DLL;ADMIN_PLAZA;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -125,8 +125,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>../../链接库/ComService.lib;../../链接库/ClientShare.lib;../../链接库/SkinControls.lib;../../链接库/ChannelModule.lib;../../链接库/DownLoad.lib;Zip.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../../运行/ClientRelease/GamePlaza.exe</OutputFile>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <OutputFile>$(ProjectDir)../../运行/ClientRelease/GamePlaza.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile />
       <GenerateMapFile>false</GenerateMapFile>
       <MapExports>false</MapExports>

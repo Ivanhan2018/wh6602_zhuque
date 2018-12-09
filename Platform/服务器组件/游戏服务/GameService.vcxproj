@@ -108,7 +108,7 @@
       <AdditionalDependencies>../../链接库/ComService.lib;../../链接库/KernelEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>../../运行/ServRelease/GameService.dll</OutputFile>
       <ModuleDefinitionFile>.\GameService.def</ModuleDefinitionFile>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

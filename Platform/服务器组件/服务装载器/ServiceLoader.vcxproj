@@ -101,7 +101,7 @@
     <Link>
       <AdditionalDependencies>../../链接库/ComService.lib;../../链接库/KernelEngine.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>../../运行/ServRelease/ServiceLoader.exe</OutputFile>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
