@@ -601,7 +601,8 @@ void CServiceParameter::UpdateOptionParameter()
 	SetDlgItemInt(IDC_KIND_ID,m_GameServiceAttrib.wKindID,FALSE);
 	SetDlgItemText(IDC_KIND_NAME,m_GameServiceAttrib.szKindName);
 	SetDlgItemInt(IDC_CHAIR_COUNT,m_GameServiceAttrib.wChairCountMax,FALSE);
-	SetDlgItemText(IDC_DEF_DATABASE_NAME,m_GameServiceAttrib.szDataBaseName);
+	//SetDlgItemText(IDC_DEF_DATABASE_NAME,m_GameServiceAttrib.szDataBaseName);//只读,游戏组件里写死了QPTreasureDB
+	SetDlgItemText(IDC_DEF_DATABASE_NAME,m_OptionParameter.szDataBaseName);
 	SetDlgItemText(IDC_CLIENT_MODULE,m_GameServiceAttrib.szClientModuleName);
 	SetDlgItemText(IDC_SERVICE_MODULE,m_GameServiceAttrib.szServerModuleName);
 	SetDlgItemText(IDC_MODULE_DESCRIBE,m_GameServiceAttrib.szDescription);
