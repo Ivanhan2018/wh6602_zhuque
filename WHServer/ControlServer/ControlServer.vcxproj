@@ -65,7 +65,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>../../链接库/ComServiceD.lib;../../链接库/KernelEngineD.lib;ZipD.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../../运行/Debug/LogonServer.exe</OutputFile>
+      <OutputFile>../../运行/Debug/ControlServer.exe</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
@@ -147,6 +147,9 @@ copy /y ..\..\运行\Release\$(TargetFileName) ..\..\发布组件\服务器组�
   </ItemGroup>
   <ItemGroup>
     <None Include="Res\ControlServer.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ControlServer.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

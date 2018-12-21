@@ -33,7 +33,7 @@ bool CCenterService::StartService()
 	StopService();
 
 	//加载参数
-	g_InitParamter.LoadInitParamter();
+	//g_InitParamter.LoadInitParamter();
 
 	//创建组件
 	if ((m_DataBaseEngine.GetInterface()==NULL)&&(m_DataBaseEngine.CreateInstance()==false)) return false;

@@ -8,9 +8,9 @@
 //////////////////////////////////////////////////////////////////////////
 
 //数据库名字
-const TCHAR szGameUserDB[]=TEXT("QPGameUserDB");						//用户数据库
-const TCHAR	szTreasureDB[]=TEXT("QPTreasureDB");						//财富数据库
-const TCHAR szServerInfoDB[]=TEXT("QPServerInfoDB");					//房间数据库
+const TCHAR szGameUserDB[]=TEXT("WHGameUserDB");						//用户数据库
+const TCHAR	szTreasureDB[]=TEXT("WHTreasureDB");						//财富数据库
+const TCHAR szServerInfoDB[]=TEXT("WHServerInfoDB");					//房间数据库
 
 //////////////////////////////////////////////////////////////////////////
 

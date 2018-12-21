@@ -182,6 +182,10 @@ BOOL CServiceLoaderDlg::OnInitDialog()
 
 	//¼ÓÔØÅäÖÃ
 	LPCTSTR pszCmdLine=AfxGetApp()->m_lpCmdLine;
+	if (pszCmdLine[0]==0)
+	{
+	     pszCmdLine=".\\gameserver.ini";
+	}
 	if (pszCmdLine[0]!=0)
 	{
 		TCHAR szDescribe[128]=TEXT("");

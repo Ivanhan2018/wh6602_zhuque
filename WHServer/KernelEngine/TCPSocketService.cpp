@@ -195,6 +195,8 @@ bool __cdecl CTCPSocketService::CloseSocket()
 }
 
 //连接地址
+//127.0.0.1的大端网络字节序是16777343,小端主机字节序是2130706433(数据的低字节保存在内存的低地址)，
+//此处dwServerIP是小端主机字节序
 bool __cdecl CTCPSocketService::Connect(DWORD dwServerIP, WORD wPort)
 {
 	if (m_bSuccess && ntohl(dwServerIP) == m_dwTempServerIP)//登录服务器有BUG -- 

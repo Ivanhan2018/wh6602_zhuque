@@ -209,12 +209,12 @@ BEGIN
     BEGIN
         BLOCK "080403a8"
         BEGIN
-            VALUE "Comments", "湖北三国鼎盛网络传媒有限公司"
-            VALUE "CompanyName", "湖北三国鼎盛网络传媒有限公司"
+            VALUE "Comments", "深圳市网狐科技有限公司"
+            VALUE "CompanyName", "深圳市网狐科技有限公司"
             VALUE "FileDescription", "游戏服务装载器"
             VALUE "FileVersion", "1, 0, 0, 0"
             VALUE "InternalName", "ServiceLoader.exe"
-            VALUE "LegalCopyright", "湖北三国鼎盛网络传媒有限公司保留所有权利。"
+            VALUE "LegalCopyright", "深圳市网狐科技有限公司保留所有权利。"
             VALUE "OriginalFilename", "ServiceLoader.exe"
             VALUE "ProductName", "游戏服务装载器"
             VALUE "ProductVersion", "1, 0, 0, 0"

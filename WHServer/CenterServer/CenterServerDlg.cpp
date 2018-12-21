@@ -127,6 +127,10 @@ BOOL CCenterServerDlg::OnInitDialog()
 	
 	//加载配置
 	LPCTSTR pszCmdLine=AfxGetApp()->m_lpCmdLine;
+	if (pszCmdLine[0]==0)
+	{
+	     pszCmdLine=".\\centerserver.ini";
+	}
 	if (pszCmdLine[0]!=0)
 	{
 		CFileFind finder;   //查找是否存在ini文件，若不存在，则生成一个新的默认设置的ini文件
