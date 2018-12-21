@@ -426,6 +426,8 @@ bool CDataBaseSink::OnRequestLogon(WORD wRequestID, DWORD dwContextID, VOID * pD
 				LogonSuccess.lGoldScore=m_AccountsDBAide.GetValue_LONG(TEXT("GoldScore"));
 				LogonSuccess.lWelfare=m_AccountsDBAide.GetValue_LONG(TEXT("Welfare"));
 				LogonSuccess.wWelfareLost=m_AccountsDBAide.GetValue_WORD(TEXT("WelfareLost"));
+
+				LogonSuccess.cbHasGuest=m_AccountsDBAide.GetValue_INT(TEXT("HasGuest"));
 			}
 			catch(IDataBaseException * pIException){
 				//Êä³ö´íÎó--ºöÂÔ´Ë´íÎó
@@ -435,7 +437,6 @@ bool CDataBaseSink::OnRequestLogon(WORD wRequestID, DWORD dwContextID, VOID * pD
 
 			LogonSuccess.dwCustomFaceVer=m_AccountsDBAide.GetValue_DWORD(TEXT("CustomFaceVer"));
 			LogonSuccess.cbIsGuest=m_AccountsDBAide.GetValue_INT(TEXT("IsGuest"));
-			LogonSuccess.cbHasGuest=m_AccountsDBAide.GetValue_INT(TEXT("HasGuest"));
 			m_AccountsDBAide.GetValue_String(TEXT("Accounts"),LogonSuccess.szAccounts,CountArray(LogonSuccess.szAccounts));
 			m_AccountsDBAide.GetValue_String(TEXT("NickName"),LogonSuccess.szNickName,CountArray(LogonSuccess.szNickName));
 			m_AccountsDBAide.GetValue_String(TEXT("UnderWrite"),LogonSuccess.szUnderWrite,CountArray(LogonSuccess.szUnderWrite));

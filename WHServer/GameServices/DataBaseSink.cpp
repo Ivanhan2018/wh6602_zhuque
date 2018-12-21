@@ -281,7 +281,7 @@ bool CDataBaseSink::OnRequestLogon(DWORD dwContextID, VOID * pData, WORD wDataSi
 			m_GameScoreDBAideVec[i].GetValue_String(TEXT("Accounts"),LogonSuccess.szAccounts,CountArray(LogonSuccess.szAccounts));
 			m_GameScoreDBAideVec[i].GetValue_String(TEXT("GroupName"),LogonSuccess.szGroupName,CountArray(LogonSuccess.szGroupName));
 			m_GameScoreDBAideVec[i].GetValue_String(TEXT("UnderWrite"),LogonSuccess.szUnderWrite,CountArray(LogonSuccess.szUnderWrite));
-			m_GameScoreDBAideVec[i].GetValue_String(TEXT("FaceUrl"),LogonSuccess.szFaceUrl,CountArray(LogonSuccess.szFaceUrl));
+			//m_GameScoreDBAideVec[i].GetValue_String(TEXT("FaceUrl"),LogonSuccess.szFaceUrl,CountArray(LogonSuccess.szFaceUrl));
 
 			//”√ªß Ù–‘
 			LogonSuccess.cbGender=m_GameScoreDBAideVec[i].GetValue_INT(TEXT("Gender"));

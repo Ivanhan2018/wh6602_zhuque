@@ -1,6 +1,42 @@
 #include "Stdafx.h"
 #include "ServiceLoader.h"
 #include "ServiceLoaderDlg.h"
+#include <string>
+using namespace std;
+
+string GetAppName()
+{
+	HINSTANCE hInst = NULL;
+	hInst = (HINSTANCE)GetModuleHandleA(NULL);
+
+	CHAR path_buffer[_MAX_PATH];
+	GetModuleFileNameA(hInst, path_buffer, sizeof(path_buffer));//得到exe文件的全路径 
+	string strPath;
+
+	strPath = path_buffer;
+
+	//只提出文件的路径，不要文件名
+	int pos = strPath.find_last_of("\\");
+	strPath = strPath.substr(pos + 1, strPath.size() - pos - 1);
+
+	//去掉.exe
+	int pos1 = strPath.find_last_of(".");
+	strPath = strPath.substr(0, pos1);
+
+	return strPath;
+}
+
+string GetININame()
+{
+	std::string pathKey = ".\\gameserver.ini";
+#ifdef WIN32
+	pathKey = ".\\"+GetAppName() + ".ini";
+	// ServiceLoader替换为gameserver
+	const char*sz1="ServiceLoader"; 
+	pathKey.replace(pathKey.find(sz1,0),strlen(sz1),"gameserver");
+#endif
+	return pathKey;
+}
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -182,9 +218,10 @@ BOOL CServiceLoaderDlg::OnInitDialog()
 
 	//加载配置
 	LPCTSTR pszCmdLine=AfxGetApp()->m_lpCmdLine;
+	string strInIName=GetININame();
 	if (pszCmdLine[0]==0)
 	{
-	     pszCmdLine=".\\gameserver.ini";
+	     pszCmdLine=strInIName.c_str();
 	}
 	if (pszCmdLine[0]!=0)
 	{
